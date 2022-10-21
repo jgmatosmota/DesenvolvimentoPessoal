@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    quanto você tirou nas 3 notas?<br>
+    <input id="in_n1"><br>
+    <input id="in_n2"><br>
+    <input id="in_n3"><br>
+    <Button onclick="calc()">Calcular</Button>
+    <div id="media">Sua média é</div>
+</body>
+</html>
+<script>
+    function calc(){
+        var n1 = Number(in_n1.value)
+        var n2 = Number(in_n2.value)
+        var n3 = Number(in_n3.value)
+
+        var re = (n1 + n2 + n3)/3
+    
+        media.innerHTML = (`Sua média foi de ${re}`)
+        if (re > 9.4){
+         media.innerHTML += "<br> você é fora de série"
+        }
+
+
+    }
+
+
+
+</script>

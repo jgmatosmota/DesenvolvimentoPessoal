@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    valorA<br>
+    <input id="in_1"><br>
+    valorB<br>
+    <input id="in_2"><br>
+    <button onclick="soma()">Soma</button>
+    <button onclick="diferenca()">diferenca</button><br>
+    <button onclick="produto()">produto</button>
+    <button onclick="razao()">razão</button><br>
+    <div id="d1">
+
+    </div>
+</body>
+</html>
+<script>
+    function soma(){
+        var A = Number(in_1.value)
+        var B = Number(in_2.value)
+        var soma = A+B
+        d1.innerHTML = `${(soma.toFixed(2))}<br>`
+    }
+    function diferenca(){
+        var A = Number(in_1.value)
+        var B = Number(in_2.value)
+        var diferenca = A-B
+        d1.innerHTML += `${(diferenca.toFixed(2))}<br>`
+    }
+    function produto(){
+        var A = Number(in_1.value)
+        var B = Number(in_2.value)
+        var produto = A*B
+        d1.innerHTML += `${(produto.toFixed(2))}<br>`
+    }
+    function razao(){
+        var A = Number(in_1.value)
+        var B = Number(in_2.value)
+        var razao = A/B
+        d1.innerHTML += `${(razao.toFixed(2))}<br>`
+    }
+</script>

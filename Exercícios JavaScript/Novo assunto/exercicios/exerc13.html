@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Quantos anos trabalho<br>
+    <input id="in_1"><br>
+    quantos kg de trigo sua plantação rendeu?<Br>
+    <input id="in_2"><br>
+    Quantas vezes faltou no trabalho por estar doente<br>
+    <input id="in_3"><br>
+    <button onclick="calc()">Deu match?</button>
+    <div id="d1"></div>
+    <img src="" id="img" alt="" height="400px">
+</body>
+</html>
+<script>
+    function calc(){
+        var trab = Number(in_1.value)
+        var trigo = Number(in_2.value)
+        var faltas = Number(in_3.value)
+        if(trab >= 5 && trigo >= 300 && faltas <= 5){
+            img.src = `https://cdn0.casamentos.com.br/vendor/1143/3_2/960/jpg/19665361-1559302317435306-1852225457082413063-n_13_101143_v1.jpeg`
+            d1.innerHTML = `Minha filha será sua RSRSRSRSRS`
+        }else{
+           img.src = `https://noticiasdatv.uol.com.br/media/_versions/everybody-hates-chris-julius-dia-dos-pais_fixed_large.jpg`
+           d1.innerHTML = `Deu ruim trabalhe mais 2 anos` 
+        }
+    }
+</script>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select name="" id="sel_1">
+        <option value="np1">Dinheiro</option>
+        <option value="np2">Cartão de débito</option>
+        <option value="p1">Cartão de crédito</option>
+        <option value="p2">Boleto</option>
+    </select>
+    <button onclick="calc()">Analisar compra</button>
+    <div id="d1"></div>
+</body>
+</html>
+<script>
+    function calc(){
+        var parcela = sel_1.value
+        if(parcela == 'np1' || parcela == 'np2' ){
+            d1.innerHTML = `Você terá que pagar a vista`
+        }else{
+            d1.innerHTML=`Pagamento poderá ser parcelado`
+        }
+    }
+</script>

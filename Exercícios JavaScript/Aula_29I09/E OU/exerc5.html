@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>BATALHA POKEMÓN</h2>
+    Iniciante
+    <select id="sel_1">
+        <option value="p">planta</option>
+        <option value="a">água</option>
+        <option value="f">fogo</option>
+    </select><br>
+    Oponente
+    <select id="sel_2">
+        <option value="p">planta</option>
+        <option value="a">água</option>
+        <option value="f">fogo</option>
+    </select><br>
+    <button onclick="battle()">Batalhar</button><br>
+    <div id="d1"></div><br>
+    <div id="d2"></div>
+</body>
+</html>
+<script>
+    var vit = 0
+    var derr = 0
+    var empate = 0
+    function battle(){
+    var ini = sel_1.value
+    var opo = sel_2.value
+    var emp = (ini == 'p' && opo == 'p') || (ini == 'a' && opo == 'a') || (ini == 'f' && opo == 'f')
+    var vit1 = (ini == 'p' && opo == 'a') || (ini == 'a' && opo == 'f')|| (ini == 'f' && opo == 'p')     
+    var der = (ini == 'a' && opo == 'p') || (ini == 'f' && opo == 'a')|| (ini == 'p' && opo == 'f')
+    if(emp){
+        d1.innerHTML=``
+        d1.innerHTML=`Batalha empatou`
+        empate++
+        d2.innerHTML = `Vitórias do iniciante:${vit}/Derrotas do iniciante:${derr}/Empates:${empate}`
+    }else if(vit1){
+        d1.innerHTML=``
+        d1.innerHTML=`Iniciante venceu`
+        vit++
+        d2.innerHTML = `Vitórias do iniciante:${vit}/Derrotas do iniciante:${derr}/Empates:${empate}`
+    }else if(der){
+        d1.innerHTML=``
+        d1.innerHTML=`Iniciante perdeu`
+        derr++
+        d2.innerHTML = `Vitórias do iniciante:${vit}/Derrotas do iniciante:${derr}/Empates:${empate}`
+    }
+    }
+</script>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Peso<br>
+    <input id="in_1"><br>
+    altura<br>
+    <input id="in_2"><br>
+    homem ou mulher <BR>
+    <input id="in_3"><br>
+    <button onclick ='calc1()'>Homem</button><br>
+    <div id="d1">
+
+    </div>
+</body>
+</html>
+<script>
+    function calc1(){
+
+        var pes = Number(in_1.value)
+        var alt = Number(in_2.value)
+        var imc = pes / (alt*alt)
+        var sexo = in_3.value
+        var imc1 = imc - (imc* 0.1)
+        if (sexo == 'H'|| sexo == 'homem' || sexo =='Homem' || sexo=='h'){
+        d1.innerHTML = `seu IMC é ${(imc.toFixed(2))}`      
+        }
+    
+        else{
+            var imc= imc - (imc* 0.1) 
+            d1.innerHTML = `seu IMC é ${(imc.toFixed(2))}
+        `
+        }
+    }
+</script>

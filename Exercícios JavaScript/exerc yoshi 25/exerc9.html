@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Ultima série assistida<br>
+    <input id="in_1">
+    Quantos episódios você assistiu?<br>
+    <input id="in_2">
+    <button onclick = "calc()">Verificar Nível</button>
+    <div id="d1">   </div>
+</body>
+</html>
+<script>
+    function calc(){
+        var v1 = in_1.value
+        var v2 = Number(in_2.value)
+        var v3 = v2 * 22
+        d1.innerHTML = `Uau você é viciado na série ${v1}`
+        if (v3 > 1800) d1.innerHTML += `<br>Uau, você realmente é viciado em série`
+    }
+
+
+</script>

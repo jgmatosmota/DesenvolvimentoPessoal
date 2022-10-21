@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Sabor<br>
+    <input id="in_1"><br>
+    preço<br>
+    <input id="in_2"><br>
+    qtd amigos <br>
+    <input id="in_3"><br>
+    <button onclick="calc()">cálculo</button><br>
+    <div id="d1">
+
+    </div>
+
+</body>
+</html>
+<script>
+    function calc() {
+        var sabor = in_1.value
+        var preco = Number(in_2.value)
+        var qtd = Number(in_3.value)
+        var result = preco / qtd
+
+        if (result <=20)    
+            {d1.innerHTML = `
+            A pizza de ${sabor} custará ${(preco).toFixed(2)} e cada um irá pagar ${(result).toFixed(2)}  `
+        }
+        else d1.innerHTML = `
+        A pizza de ${sabor} custará ${(preco).toFixed(2)} e cada um irá pagar ${(result).toFixed(2)}, mas está muito cara e é melhor achar outra oportunidade  
+        `
+    }
+</script>

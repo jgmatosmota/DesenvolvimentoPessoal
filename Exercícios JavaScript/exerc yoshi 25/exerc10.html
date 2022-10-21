@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="exer10.css">
+    <title>Document</title>
+</head>
+<body>
+    Valor da seu saldo<br>
+    <input id="in_1">
+    <button onclick = "calc()">calc</button>
+    <div id="d1"></div>
+
+</body>
+</html>
+<script>
+        function calc(){
+            var v1= Number(in_1.value)
+            console.log(v1)
+            if (v1 == 0 )d1.innerHTML = "Conta zerada"
+            if (v1 < 0 ) {
+                d1.innerHTML = "Está Devendo"
+                d1.classList.add("t1")
+            }
+            if (v1 > 0 ) {
+                d1.innerHTML = "Saldo positivo😊"
+                d1.classList.add("t2")
+            }
+            
+
+        }
+
+</script>

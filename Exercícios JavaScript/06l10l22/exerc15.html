@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Qual a sua idade?<br>
+    <input onkeyup="idade()" id="in_1">
+    <div id="d1">
+
+    </div>
+</body>
+</html>
+<script>
+    function idade(){
+        var valor = 0
+        var idade = Number(in_1.value)
+        d1.innerHTML=``
+        while(valor<idade){
+            valor++
+            
+            if(valor <= 4){
+                d1.innerHTML+=`${valor} anos - Primeira infância<br>`
+            }else if (valor<=6) {
+                d1.innerHTML+=`${valor} anos - Pré escola<br>`
+            }else if (valor<=10){
+                d1.innerHTML+=`${valor} anos - Segunda infância<br>`
+            }else if(valor <= 18){
+                d1.innerHTML+= `${valor} anos - Adolescência<br>`
+            }else if(valor<=50){
+                d1.innerHTML += `${valor} anos - Adulto<br>`
+            }else if (valor <= 100){
+                d1.innerHTML += `${valor} anos - Melhor idade<br>`
+            }else{
+                d1.innerHTML += `${valor} anos - Matusalem<br>`
+            }
+        }
+    }
+</script>

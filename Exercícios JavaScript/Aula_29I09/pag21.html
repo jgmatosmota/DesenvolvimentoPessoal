@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input placeholder="frase qualquer" id="in_1"
+        onkeyup="desc()"
+    >
+    
+        <div id="d1">
+
+        </div>
+</body>
+</html>
+<script>
+    function desc(){
+       
+        var frase = in_1.value
+        var tamanho = frase.length
+        var tem_b = frase.indexOf('b')>= 0
+
+        
+        d1.innerHTML=`
+            o texto tem ${tamanho} caracteres<br>
+            o texto tem a letra'b' ? ${tem_b} <BR>
+            Como ele ficaria em CAIXA ALTA? ${frase.toUpperCase()}<BR>
+            Como ele ficaria em caixa baixa? ${frase.toLowerCase()}<BR>
+            Se eu trocar todos os 'a' po '@': ${frase.replaceAll('a','B===============D<Br>')} <br>    
+
+
+        `
+    }
+</script>

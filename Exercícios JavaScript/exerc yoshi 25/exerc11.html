@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Quantidade de filhos <br>
+    <input id="in_1">
+    <button onclick = "calc()">Analisar família</button>
+    <div id="d1"></div>
+</body>
+</html>
+<script>
+    function calc(){
+        var v1= Number(in_1.value)
+        if (v1 => 1)d1.innerHTML = "Não tem Tv<br>"
+        if (v1 => 2)d1.innerHTML += "Não tem internet<br>"
+        if (v1 => 3)d1.innerHTML += "Não tem videogame<br>"
+        if (v1 => 4)d1.innerHTML += "Não tem Netflix<br>"
+    }
+
+</script>

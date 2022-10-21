@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Quantos ônibus você pega?<br>
+    <input id="in_1"><br>
+    Quantos trens precisa pegar?<Br>
+    <input id="in_2"><br>
+    Quantos metrôs precisa pegar?<br>
+    <input id="in_3"><br>
+    <button onclick="trajeto()" id="btn1">Partiu trajeto</button><br>
+    <div id="d1"></div><br>
+    <div id="d2"></div><br>
+    <div id="d3"></div><br>
+</body>
+</html>
+<script>
+    function trajeto(){
+        var onibus= Number(in_1.value)
+        var trem = Number(in_2.value)
+        var metro = Number(in_3.value)
+        var valor = 0
+        var valor1 = 0
+        var valor2 = 0
+        var negativa = onibus < 0 || trem <0 || metro < 0
+        var zero =  onibus == 0 || trem == 0 || metro == 0
+        var zeroab = onibus == 0 && trem == 0 && metro == 0
+        var metro0 = metro == 0
+        var trem0 = trem==0
+        var onibus0= onibus ==0
+        if(negativa){
+            alert(`Os valores não podem ser negativos`)
+            btn1.disabled=true
+        }else if(zero){
+            if(zeroab){
+                d1.innerHTML=`OPS...parece que esse veio de helicóptero!!!!kkkkk`
+                d1.style.color=`yellow`
+            }if(metro0){
+                d2.innerHTML+=`<br>NÃO PRECISOU PEGAR O METRO`
+            }if(trem0){
+                d2.innerHTML+=`<br>NÃO PRECISOU PEGAR O TREM`
+            }if(onibus0){
+                d2.innerHTML+=`<br>NÃO PRECISOU PEGAR O ONIBUS`
+            }
+
+        }else{
+            while(valor < onibus){
+                valor++
+                d1.style.color=`red`
+                d1.innerHTML+=`<br>Pegando o ${valor} buzão`
+                if(valor==2){
+                    d1.innerHTML+=`Começando a cansar`
+                }
+                if(valor >= 3){
+                    d1.innerHTML+=`Já cansado`
+                }
+            }while(valor1 < trem){
+                    valor1++
+                    d2.style.color=`green`
+                    d2.innerHTML+=`<br>Pegando o ${valor1} trem`
+                if(valor1==2){
+                    d2.innerHTML+=`Começando a cansar`
+                }
+                if(valor1 >= 3){
+                    d2.innerHTML+=`Já cansado`
+                }
+            }while(valor2 < metro){
+                    valor2++
+                    d3.style.color=`blue`
+                    d3.innerHTML+=`<br>Pegando o ${valor2} metrô`
+                if(valor2==2){
+                    d3.innerHTML+=`Começando a cansar`
+                }
+                if(valor2 >= 3){
+                    d3.innerHTML+=`Já cansado`
+                }
+            }
+        }
+    }
+</script>

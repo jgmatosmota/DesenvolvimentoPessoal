@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Altura desejada inical<br>
+    <input id="in_1"><br>
+    altura desejada final<br>
+    <input id="in_2"><br>
+    <button id="btn1" onclick="calc()">Definir parametros</button><br>
+    Qual seu nome<Br>
+    <input id="in_3"><br>
+    Qual sua altura <Br>
+    <input id="in_4"><br>
+    <button id="btn2" onclick="calc1()">Ver aprovação</button><br>
+    <div id="d1"></div>
+
+</body>
+</html>
+<script>
+     var altin = 0
+     var altfin = 0
+    function calc(){
+        var altd = Number(in_1.value)
+        var altf = Number(in_2.value)
+        if(altd > 1 && altf > altd  ){
+            altin = altd
+            altfin = altf
+            alert(`Parametros atualizados`)
+        }else{
+            alert(`parametros errados`)
+            btn1.disabled=true
+            btn2.disabled=true 
+        }
+    }
+    function calc1(){
+        var altura = Number(in_4.value)
+        if (altura >= altin && altura <= altfin){
+            d1.innerHTML += `O candidato ${in_3.value} com altura de ${altura} participará do processo de seleção de piloto<br>`
+        }else{
+            d1.innerHTML += `Infelizmente o candidato ${in_3.value} com altura de ${altura} não atende os requisitos<br>`
+        }
+    }
+</script>

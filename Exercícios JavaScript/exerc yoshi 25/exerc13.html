@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Insira suas duas notas <br>
+    N1<input id="in_1"><br>
+    N2<input id="in_2"><br>
+    <button onclick="calc()">Verificar situação</button>
+</body>
+</html>
+<script>
+    function calc() {
+        var v1 = Number(in_1.value)
+        var v2 = Number(in_2.value)
+        var v3 = (v1 + v2) / 2
+        if (v3 >= 6) alert("Parabéns aprovado")
+        if (v3 < 6) alert("Tente outra vez....") 
+    }
+
+</script>

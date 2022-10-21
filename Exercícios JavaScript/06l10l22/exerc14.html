@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    De quantos em quantos dias você malha?<br>
+    <input id="in_1"><br>
+    <button onclick="maya()">Exibir rotina mensal</button><br>
+    <div id="d1">
+
+    </div>
+</body>
+</html>
+<script>
+    function maya(){
+        var valor=0;
+        var dias = Number(in_1.value);
+        var mes = 30;
+        var cont = 2
+        d1.innerHTML+=`dia1-Malhar<Br>`
+        while(cont<=30){
+            
+            if(cont % dias  == 1){
+                d1.innerHTML+=`dia${cont}-Malhar<br>`
+            }else{
+                d1.innerHTML+=`dia${cont}-Descanso<br>`
+            }
+            cont++
+        }
+
+    }
+</script>

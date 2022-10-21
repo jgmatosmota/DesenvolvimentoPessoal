@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="d_tela">
+        <H2>Pontos de energia!</H2><br>
+        <input id="in_energ"></input><br>
+        <h2>Quantidade de clones desejada!</h2><br>
+        <input id="in_clone"><br>
+        <h2>Quantidade de clones por linha</h2><br>
+        <input id="in_cloneLinha"><br>
+        <button onclick="clonar()">Criar clones</button><br>
+        <div id="d_img"></div><br>
+        <div id="d_analise"></div><Br>
+        <div id="d_msg"></div><br>
+    </div>
+    
+
+    
+</body>
+</html>
+<script>
+    function clonar(){
+        var valor = 0
+        var energ = Number(in_energ.value);
+        var clone = Number(in_clone.value);
+        var cloneLinha = Number(in_cloneLinha.value);
+        var energClone= clone * 20;
+        var sobraEnerg = energ - energClone;
+        var calcSobra = (sobraEnerg/energ) * 100; 
+        var validacaoEnerg = energ >= energClone;
+        var validacao = (energ >= 50 && energ <= 5000) && (clone >= 0 && clone <= 250) && (cloneLinha > 0);
+        if(validacao){
+            if(validacaoEnerg){
+                while(valor < clone){
+                    if(valor % cloneLinha==0){
+                        d_img.innerHTML+=`<BR>`
+                    }
+                    d_img.innerHTML += `<img src="https://preview.redd.it/tudjq02jost71.jpg?auto=webp&s=ed558eeba8ee7c136febe2cd0084d2ab3661b9eb" height="50" width ="50" >`
+                    valor++
+                }
+                d_analise.innerHTML=`ANÁLISE DE GERAÇÃO DE CLONES<BR> Energia inicial:${energ}<BR>Qtd de Clones:${clone}<br>Sobra de Energia:${sobraEnerg}`
+                if(sobraEnerg > 1000 || (clone > 50 && calcSobra >= 20)){  
+                    d_msg.innerHTML=`PROVAVELMENTE VOCE VAI GANHAR<BR>`    
+                }else if(sobraEnerg >500 || ((clone >= 20 && clone <= 50) && calcSobra >=10)){
+                    d_msg.innerHTML = `A LUTA VAI SER MUITO BOA`
+                }else{
+                    d_msg.innerHTML = `TORÇA PARA O ADVERSÁRIO SER FRAQUINHO`
+                }
+            }
+            else{
+                alert(`A quantidade de energia gasta nos clones não pode ser maior
+                que a quantidade de energia disponível`)
+            }
+        }else{
+            alert(`ERRO NA ENTRADA DE DADOS - Energia tem que ser entre 20 e 5.000.
+            Quantidade de Clones tem que ser entre 0 e 250. Quantidade de Clones por linha tem que ser maior que 0`)
+        }
+    }
+</script>

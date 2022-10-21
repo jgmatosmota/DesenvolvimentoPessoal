@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Quantos pães você come por dia?<br>
+    <input id="in_1"><Br>
+    E bolachas?<br>
+    <input id="in_2"><Br>
+    E copos de achocolatado?<br>
+    <input id="in_3"><Br>
+    <button onclick="cal()">Verificar calorias</button><br>
+    <div id="d1">
+
+    </div>
+</body>
+</html>
+<script>
+    function cal(){
+    var pao = 50 *  Number(in_1.value)
+    var bol = 80 * Number(in_2.value)
+    var acho = 70 *  Number(in_3.value)
+    var caloria = pao + bol + acho
+    if (caloria < 200){
+        d1.innerHTML=`Parabéns vai sair em forma da quarentena`
+    }else if (caloria <= 400){
+        d1.innerHTML = `Cuidado, vai ficar mais fofinho`
+    }else {
+        d1.innerHTML = `Bom, acho que muitos não irão te reconhecer depois da quarentena`
+    }
+    }
+</script>

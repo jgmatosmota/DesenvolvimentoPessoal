@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Calculadora de cansaço do aluno SPTech.</h2><br>
+    Meio de transporte<br>
+    <select name="" id="sel_1">
+        <option value="v1">Ônibus</option>
+        <option value="v2">Metrô</option>
+        <option value="v3">Carro</option>
+        <option value="v4">Bicicleta</option>
+        <option value="v5">Lotação</option>
+    </select>
+    <button onclick="calc()">Calcular cansaço</button><br>
+    <div id="d1"></div>
+</body>
+</html>
+<script>
+    function calc(){
+        var can = sel_1.value
+        if(can == 'v3' || can == 'v4'){
+            alert(`Ta tranquilo`)
+        }else if (can == 'v2'){
+            alert(`Um pouco cansado`)
+        }else{
+            alert(`Vish vive cansado`)
+        }
+    }
+</script>

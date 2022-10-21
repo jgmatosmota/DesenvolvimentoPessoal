@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Usuário<Br>    
+    <input id="in_1"><BR>
+    SenhA<bR>
+    <input id="in_2"><BR>
+    Código 2fa<Br>
+    <input id="in_3"><BR>
+    <button onclick="login()">Logar</button>
+</body>
+</html>
+<script>
+    function login(){
+        var usu = in_1.value.toUpperCase()
+        var senha = in_2.value.toUpperCase()
+        var cod = Number(in_3.value)
+        var usuv = usu == 'SPTECH'
+        var senhav = senha == 'SCHOOL'
+        var codv = cod == '595'
+        if ((usuv && senhav) || codv){
+            alert(`Usuário autenticado com sucesso`)
+        }else{
+            alert(`Falha na autenticação`)
+        }
+    }
+</script>

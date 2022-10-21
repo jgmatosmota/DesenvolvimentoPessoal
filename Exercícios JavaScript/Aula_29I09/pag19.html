@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<input placeholder="qlqr n'umero" id="in_1"
+onkeyup="calc()">
+<div id="d1">
+
+</div>
+
+</body>
+</html>
+<script>
+    function calc(){
+        var numero = Number(in_1.value)
+        var result = numero % 2
+        var sete = numero % 7
+        if(result == 0 ){
+            d1.innerHTML = `é par`
+        }else{
+            d1.innerHTML=`é impar`
+        }
+        if(sete == 0){
+            d1.innerHTML += `<br>é múltiplo de 7`
+        }else{
+            d1.innerHTML += `<br>não é múltiplo `
+        }
+    }
+</script>

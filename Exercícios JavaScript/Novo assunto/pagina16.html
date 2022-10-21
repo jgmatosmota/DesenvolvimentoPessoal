@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <h2>Saio hoje?</h2><br>
+  Quanto tenho?<br>
+  <input placeholder="dindin" id="in_1"><br>
+  Qual a temperatura?<br>
+  <input placeholder="temperatura" id="in_2"><br>
+  <button onclick="calc()">Vou sair?</button>
+ 
+</body>
+</html>
+<script>
+    function calc(){
+    var dinheiro = Number(in_1.value)
+    var temperatura = Number(in_2.value) 
+    if (dinheiro >= 100 && temperatura >=20){
+    alert('SIM')
+    }else {
+        alert('Nao')
+    }
+}
+
+
+
+</script>

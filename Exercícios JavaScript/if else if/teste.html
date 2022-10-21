@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="d1">Valor Guardado: R$0.00</div><br>
+    <button onclick="calc()">adicionar 5</button>
+    <button onclick="calc1()">gastar 10</button>
+    <div id="d2"></div><br>
+</body>
+</html>
+<script>
+  var valor = 0      
+    
+    function calc(){
+        valor = valor + 5
+        d1.innerHTML=`Valor Guardado: R$${valor}`
+        
+    }
+    function calc1(){
+        valor = valor - 10
+        d1.innerHTML=`Valor Guardado: R$${valor-10}`
+    
+    }
+    if(valor >= 0 ){
+            d2.innerHTML=`Finanças OK!`
+        }else if(valor >= 100){
+            d2.innerHTML=`Finanças OK!<br> #ostentação`
+        }else if(valor < 0 ){
+            d2.innerHTML=`Finanças em perigo`
+        }else if (valor <= -20){
+            d2.innerHTML=`Finanças em perigo <br> Seu nome vai ficar sujo em!`
+        }
+</script>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <div id="d3"  style="display: block;">
+        Altura desejada inical para piloto<br>
+        <input id="in_1"><br>
+        altura desejada final para piloto<br>
+        <input id="in_2"><br>
+        Altura desejada inical para jogador de basquete<br>
+        <input id="in_5"><br>
+        altura desejada final para jogador de basquete<br>
+        <input id="in_6"><br>
+        <button id="btn1" onclick="calc()">Definir parametros</button><br>
+    </div>
+    
+    <div id="d2" style="display:none;">
+        <select name="" id="sel_1">
+            <option value="basquete">basquete</option>
+            <option value="piloto">piloto</option>
+        </select>
+        Qual seu nome<Br>
+        <input id="in_3"><br>
+        Qual sua altura <Br>
+        <input id="in_4"><br>
+        <button id="btn2" onclick="calc1()">
+            Ver aprovação
+        </button><br>
+        <button id="btn3" onclick="calc3()">
+            voltar
+        </button>
+        <div id="d1">   
+
+        </div>
+    </div>
+
+</body>
+</html>
+<script>
+     var altin = 0
+     var altfin = 0
+     var altinb = 0
+     var altfinb = 0
+    function calc(){
+        var altd = Number(in_1.value)
+        var altf = Number(in_2.value)
+        var altdb = Number(in_5.value)
+        var altfb = Number(in_6.value)
+        if(altd > 1 && altf > altd && altdb > 1.5 && altfb > altdb ){
+            altin = altd
+            altfin = altf
+            altinb = altdb
+            altfinb = altfb
+            d3.style.display='none'
+            d2.style.display='block'
+            d1.innerHTML= `<h2>Processo de selecão de novos atletas</h2><Br>
+            Critério de seleção de piloto- altura entre ${altin} e ${altfin}
+            <br>Critério de seleção de jogador de basquete entre ${altinb} e
+            ${altfinb}<br>`
+            alert(`Parametros atualizados`)
+        }else{
+            alert(`parametros errados`)
+            btn1.disabled=true
+            btn2.disabled=true 
+        }
+    }
+    
+    function calc1(){
+        var altura = Number(in_4.value)
+        var combo = sel_1.value
+        if (altura >= altin && altura <= altfin && combo == 'piloto'){
+            d1.innerHTML += `O candidato ${in_3.value} com altura de ${altura} participará do processo de seleção de piloto<br>`
+        }else if (altura < altin || altura > altfin && combo == 'piloto'){
+            d1.innerHTML += `Infelizmente o candidato ${in_3.value} com altura de ${altura} não atende os requisitos<br>`
+        }else if(altura >= altinb && altura <= altfinb && combo == 'basquete'){
+            d1.innerHTML += `O candidato ${in_3.value} com altura de ${altura} participará do processo de seleção de jogador de basquete<br>`
+        }else{
+            d1.innerHTML += `Infelizmente o candidato ${in_3.value} com altura de ${altura} não atende os requisitos<br>` 
+        }
+    }
+    function calc3(){
+        d3.style.display='block'
+        d2.style.display='none'
+    }
+</script>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Qual sua nota<br>
+    <input id="in_1"><br>
+    qual sua frequencia? <Br>
+    <input id="in_2"><br>
+    <button onclick="calc()">Avaliar Aluno</button>
+</body>
+</html>
+<script>
+    function calc(){
+        var nota = Number(in_1.value)
+        var freq = Number(in_2.value)
+        if (nota >= 6 && freq >= 75){
+            alert(`parabens aprovado`)
+        }else{
+            alert(`Infelizmente não foi dessa vez`)
+        }
+    }
+</script>

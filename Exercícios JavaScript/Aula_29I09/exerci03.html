@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Nota<br>
+    <input id="in_1"><Br>
+    frequencia<br>    
+    <input id="in_2"><Br>
+    <Button onclick="calc()">Ver resultado</Button><br>
+    <div id="d1"></div>    
+</body>
+</html>
+<script>
+    function calc(){
+        var nota = Number(in_1.value)
+        var freq = Number(in_2.value)
+        var aprov = nota >= 6 && freq >= 75
+        var repn = nota < 6
+        var repf = freq < 75
+        if (aprov){
+            d1.innerHTML=`Parabéns, aprovado<br>`
+        }else if(repn){
+            d1.innerHTML += `reprovado por nota<br>`
+        }if(repf){
+            d1.innerHTML += `reprovado por falta<br>`
+        }
+    }
+</script>

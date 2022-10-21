@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Qual estação do ano</h2>    
+
+    <select id="est" onchange="esta()">
+        <option value="">...</option>
+        <option value="verao">Janeiro</option>
+        <option value="verao">Fevereiro</option>
+        <option value="outono">Março</option>
+        <option value="outono">Abril</option>
+        <option value="outono">Maio</option>
+        <option value="inverno">Junho</option>
+        <option value="inverno">Julho</option>
+        <option value="inverno">Agosto</option>
+        <option value="primavera">Setembro</option>
+        <option value="primavera">Outubro</option>
+        <option value="primavera">Novembro</option>
+        <option value="verao">Dezembro</option>
+        
+    </select>
+    <br>
+    <div id="d1"></div>
+    <img src="" id="est1" style="height: 450px;">
+
+</body>
+</html>
+<script>
+    function esta() {
+        est1.src = est.value
+        var img = est.value
+        if(img == 'verao'){
+            d1.innerHTML=`verão`
+            est1.src=`http://i.mlcdn.com.br/portaldalu/fotosconteudo/12123.jpg`
+        }else if (img == 'outono'){
+            d1.innerHTML = `outono`
+            est1.src = `https://s3.static.brasilescola.uol.com.br/be/2021/03/outono.jpg`
+        }else if (img == 'inverno'){
+            d1.innerHTML = `Inverno`
+            est1.src = `https://www.infoescola.com/wp-content/uploads/2008/10/inverno-450x334.jpg`
+        }else {
+            d1.innerHTML = `Primavera`
+            est1.src = `https://www.neoenergia.com/pt-br/te-interessa/meio-ambiente/PublishingImages/fotos/708x324-primavera.jpg`
+        }
+    }
+</script>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select name="" id="sel_1">
+        <option value="nv">Ovos</option>
+        <option value="v">Leite de arroz</option>
+        <option value="nv">Bacon</option>
+    </select>
+    <select name="" id="sel_2">
+        <option value="nv">bife</option>
+        <option value="v">hamb de soja</option>
+        <option value="nv">Frango grelhado</option>
+    </select>
+    <select name="" id="sel_3">
+        <option value="v">picanha de soja</option>
+        <option value="nv">Cupim</option>
+        <option value="nv">coração</option>
+    </select>
+    <button onclick="veg()">Sou vageno</button>
+</body>
+</html>
+<script>
+    function veg(){
+        var opt1 = sel_1.value
+        var opt2 = sel_2.value
+        var opt3 = sel_3.value
+        if (opt1 == 'v' && opt2 == 'v' && opt3 == 'v'){
+            alert(`Sou vagano`)
+        }else{
+            alert(`Não, você não é vegano`)
+        }
+    }
+</script>

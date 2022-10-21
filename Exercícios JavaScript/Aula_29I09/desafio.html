@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select name="" id="sel_1">
+        <option value="b">Branco </option>
+        <option value="i">Integral</option>
+    </select><br>
+    Tempo de cozimento em m<br>
+    <input id="in_1"><br>
+    Quantidade de sal<br>
+    <input id="in_2"><br>
+    <button onclick="par()">avaliar arroz</button><Br>
+    <div id="d1">
+
+    </div>
+
+    <img id="ant" src="" alt="">
+</body>
+</html>
+<script>
+    function par(){
+        var coz = Number(in_1.value)
+        var sal = Number(in_2.value)
+        var tipo = sel_1.value
+        var branco = coz == 10 && sal <=10 && tipo == 'b'
+        var inte = coz == 20 && sal <= 15 && tipo == 'i'
+        branco || inte ?(
+            d1.innerHTML= `arroz perfeito`,
+            ant.src = `https://img.itdg.com.br/tdg/images/recipes/000/000/770/323683/323683_original.jpg`
+
+        ):( 
+            d1.innerHTML = `Seu arroz não está perfeit`,
+            ant.src=`https://noticiasdatv.uol.com.br/media/uploads/erick-jacquin-freezer-bronca-pesadelo-na-cozinha-reproducao-band-min.jpg`
+        );
+    }
+</script>

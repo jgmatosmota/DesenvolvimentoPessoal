@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Quantos KW/h você consome no mês? <Br>
+    <input id="in_k"><br>
+    <Button onclick="calc()">Calcular conta</Button><br>
+    <div id="kw">
+        Sua conta custará  
+
+    </div>
+</body>
+</html>
+<script>
+    function calc() {
+        
+        var n2 = Number(in_k.value) * 0.85
+        var n3 = n2 * 0.9
+        
+        kw.innerHTML = `O valor da sua conta será ${n2}`
+            if (n2 < 100) alert(`Sua conta agora custará ${n3}`)
+
+    }
+
+
+</script>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="exerc07.css">
+    <title>Document</title>
+</head>
+<body>
+    Digita aqui seu saldo<br> 
+    <input id="in_1"><br>
+    Quanto você irá sacar?<br>
+    <input id="in_2"><br>
+    <button onclick="calc()">Analisar conta</button>
+    <div id="d1"></div>
+    <div id="d2"></div>
+</body>
+</html>
+<script>
+    function calc(){
+        var v1 = Number(in_1.value)
+        var v2 = Number(in_2.value)
+        var v3 = v1 - v2 
+        
+        d1.innerHTML = `O saldo atual da conta core é de ${v3}`
+        if(v3 < 0) d1.classList.add("t1");
+    }
+</script>

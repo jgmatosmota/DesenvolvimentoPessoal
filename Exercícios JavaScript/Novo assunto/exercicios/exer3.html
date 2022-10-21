@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Qual sua nota<br>
+    <input id="in_1"><br>
+    <BUTTon onclick="calc()">Avaliar aluno</BUTTon>
+</body>
+</html>
+<script>
+    function calc(){
+        var nota = Number(in_1.value)
+        if (nota >= 0 && nota <= 10){
+            alert(`Nota válida`)
+        }else{
+            alert(`onde já se viu uma nota não estar entre 0 e 10 saguizinho`)
+        }
+    }
+</script>

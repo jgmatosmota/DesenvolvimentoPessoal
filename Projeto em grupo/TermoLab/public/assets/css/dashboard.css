@@ -1,0 +1,225 @@
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* MAIN */
+.div_main{
+    margin-left: 70px;
+    height: 100%;
+    background-color: var(--background-dashboard);
+}
+
+/* HEADER - MAIN */
+
+.div_header{
+    width: 100%;
+    height: 80px;
+    background-color: var(--header-dashboard);
+}
+
+.div_usuario{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    
+    height: 100%;
+    padding-left: 30px;
+    font-size: 1.3rem;
+    letter-spacing: 3px;
+}
+
+
+/* KPI */
+
+.div_kpi{
+    margin: 40px 20px 0  ;
+}
+
+.div_kpi .div_container{
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.div_vacina{
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--header-dashboard);
+    cursor: pointer;
+    border-radius: 20px;
+    width: 350px;
+    padding: 10px;
+
+    transition: transform .2s ;
+}
+
+.div_vacina:hover{
+    transform: scale(106%);
+}
+
+
+.div_nome_vacina{
+    white-space: nowrap;
+    margin-right: 20px;
+}
+.div_nome_vacina span{
+    font-size: 2rem;
+    font-weight: normal;
+} 
+
+.div_marcadores{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+
+
+.div_forma_marcador{
+    text-align: center;
+    height: 80px;
+    width: 80px;
+    margin: 3px;
+    border-radius: 10px;
+    color: var(--branco);
+
+    transition:transform .2s ;
+}
+
+.div_forma_marcador:hover{
+    transform: scale(105%);
+}
+.s_titulo{
+    font-size: 9px;
+    font-family: sans-serif;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 4px;
+}
+
+.div_marcador_setor{
+    background-color: #174580;
+}
+.div_marcador_min{
+    background-color: #0e3363;
+}
+.div_marcador_max{
+    background-color: #e6903a;
+}
+
+.div_amplitute{
+    background-color: #2866b8;
+}
+
+
+/* CONTEXTO E GRÁFICOS - MAIN */
+
+.div_contexto_grafico{
+    display: flex;
+    margin-top: 80px;
+    margin-left: 80px;
+    justify-content: space-around;
+    align-items: center;
+
+    position: relative;
+}
+
+.div_principal_contexto{
+    display: flex;
+ 
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+}
+
+.div_espacamento{
+    width: 300px;
+    height: 450px;
+}
+.div_contexto h2{
+    font-size: 2.2rem;
+    font-weight: normal;
+    color: #979797;
+}
+.div_contexto_marcadores{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.div_forma_contexto_marcador{
+    width: 130px;
+    height: 130px;
+    color: var(--branco);
+    text-align: center;
+    font-size: 1.2rem;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.contexto_s_titulo{
+    display: block;
+    font-size: .5rem;
+    margin-bottom: 5px;
+    letter-spacing: 2px;
+}
+.s_valores{
+    font-size: 2.3rem;
+}
+.div_dupla_marcadores{
+    display: flex;
+    gap: 30px;
+}
+
+
+/* GRÁFICOS */
+
+.div_chart_principal{
+    text-align: center;
+}
+
+.div_chart_principal h2{
+    font-size: 1.7rem;
+    font-weight: normal;
+    color: #979797;
+}
+.div_graficos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: 10px;
+    gap: 10px;
+}
+
+.div_chart_box{
+    width: 280px;
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+    border-radius: 20px;
+    background-color: var(--header-dashboard);
+    text-align: center;
+}
+.div_chart_box h3{
+    font-weight: normal;
+    color: #979797;
+}
+.div_grafico_singular{
+    width: 200px;
+    height: 200px;
+}
+

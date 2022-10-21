@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Qual tabuada você quer aprender? <br>
+
+    <select id="tabu"   onchange="calc()">
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+    </select><br>
+
+    <d1 id="d1">
+
+    </d1>
+</body>
+</html>
+<script>
+    function calc(){
+        var tab = Number(tabu.value)
+        var tab1 = tab * 1
+        var tab2 = tab * 2
+        var tab3 = tab * 3
+        var tab4 = tab * 4
+        var tab5 = tab * 5
+        var tab6 = tab * 6
+        var tab7 = tab * 7
+        var tab8 = tab * 8
+        var tab9 = tab * 9
+
+        d1.innerHTML +=`
+        ${tab} * 1 = ${tab1}<br>
+        ${tab} * 2 = ${tab2}<br>
+        ${tab} * 3 = ${tab3}<br>
+        ${tab} * 4 = ${tab4}<br>
+        ${tab} * 5 = ${tab5}<br>
+        ${tab} * 6 = ${tab6}<br>
+        ${tab} * 7 = ${tab7}<br>
+        ${tab} * 8 = ${tab8}<br>
+        ${tab} * 9 = ${tab9}<br>
+        
+        
+        ` 
+    }
+</script>

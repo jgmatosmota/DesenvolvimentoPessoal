@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Que fruta chegou na mesa?<br>
+    <input  id="in_1"><Br>
+    <button onclick="calc()">Vai comer?</button>
+    <div id="d1"></div>
+</body>
+</html>
+<script>
+    var fruta = '';
+    function calc(){
+      var escolha = in_1.value    
+      fruta = escolha
+      if (fruta == 'uva' || fruta == 'abacaxi'){
+      d1.innerHTML = `Sim, vai comer ${fruta}`
+      }else{
+        alert(`A fruta ${fruta} ela não come`)
+      }  
+    }
+</script>

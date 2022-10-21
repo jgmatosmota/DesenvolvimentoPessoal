@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    login <Br>   
+    <input placeholder="login" id="in_1"><Br>
+        senha<Br>
+    <input placeholder="password" id="in_2"><Br>
+    <button onclick="valid()">logar</button>    
+    <div id="d1"></div>
+</body>
+</html>
+<script>
+function valid(){
+    var login = in_1.value
+    var senha = in_2.value
+    var login1 = login == 'aidimin'
+    var senha1 = senha == 'seinha'
+    var valid = login == 'aidimin' && senha == 'seinha'
+    if (valid){
+        d1.innerHTML += `<span>logado</span>`
+    }else if (!login1){
+        d1.innerHTML += `Login inválido<br>`
+    } if(!senha1){
+
+        d1.innerHTML += `senha inválida`
+        if (!senha1 && login1)
+        alert(`contato com suporte para redefinir`)
+    }
+        
+    
+}
+</script>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Idade<br>
+    <input id="in_1"><br>
+    salário<br>
+    <input id="in_2"><br>
+    <button onclick="calc()">verificar situação</button><br>
+    <div id="d1"></div>
+    
+</body>
+</html>
+<script>
+    function calc(){
+        var ida = Number(in_1.value)
+        var sal = Number(in_2.value)
+        if (ida <18 && sal < 2500 ){
+            d1.innerHTML = `Menor de idade e liso`
+        }else if (ida < 18 && sal >= 2500 ){
+            d1.innerHTML = `Menor de idade e ostentação`
+        }else if (ida >= 18 && sal < 3500){
+            d1.innerHTML = `Maior de idade e liso`
+        }else if (ida >= 18 && sal >= 3500 && sal <= 7000){
+            d1.innerHTML = `Maior de idade e ostentação`
+        }else{
+            d1.innerHTML = `Maior de idade mega ostentação`
+        }
+    }
+</script>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="exerc06.css">
+    <title>Document</title>
+</head>
+<body>
+    Valor da renda familiar <br>
+    <input id="in_1"><br>
+    Valor da prestação <br>
+    <input id="in_2">
+    <Button onclick="calc()">verificar financiamento</Button>
+    <div id="prest"></div>
+    <b><div class = "t1"id="prest2"></div></b>
+</body>
+</html>
+<script>
+    function calc(){
+        var n1 = Number(in_1.value)
+        var n2 = Number(in_2.value)
+        var n3 = (n2/n1) * 100
+        prest.innerHTML = `à prestação corresponde a ${n3}% da renda familiar`
+        if(n3>30)prest2.innerHTML='<br>será necessário complementar a renda familiar'
+    
+    
+    }
+
+
+
+
+
+</script>

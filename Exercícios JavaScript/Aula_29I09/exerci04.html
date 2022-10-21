@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Sua idade<br>
+    <input id="in_1" onkeyup="calc()"><br>
+    <div id="d1"></div>
+    
+</body>
+</html>
+<script>
+
+function calc(){
+    var idade = Number(in_1.value)
+    var inf = idade >=0 || idade <= 12
+    var ado = idade > 12 || idade <= 18
+    var ido = idade >18 || idade >= 65
+    if(inf){
+        d1.innerHTML=`Já passou pela infancia? ${inf}<Br>Já passou pela 
+        adolescencia? ${ado}<Br>
+        já passou ${ido}<Br>
+        Total de pontos:10`
+                
+    }else if(ado){
+            d1.innerHTML=`Já passou pela infancia? ${inf}<Br>Já passou pela 
+            adolescencia? ${ado}<Br>
+            já passou ${ido}<br>Total de pontos:30`
+    }if(ido){
+            d1.innerHTML=`Já passou pela infancia? ${inf}<Br>Já passou pela 
+            adolescencia? ${ado}<Br>
+            já passou ${ido}<Br>Total de pontos:80`
+    }
+}
+</script>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    A<br>
+    <input  id="in_1"><br>
+    b<br>
+    <input  id="in_2"><br>
+    <button onclick="calc()">calcule média </button>
+    <div id="d1">
+
+    </div>
+    
+</body>
+</html>
+<script>
+    function calc(){
+        var notaA = Number(in_1.value)
+        var notaB = Number(in_2.value)
+        var media = (notaA + notaB) / 2
+        if (media >= 6) d1.innerHTML=`
+        Sua nota foi de ${(media.toFixed(2))} e você foi aprovado 
+        `
+        else d1.innerHTML=`
+        Sua nota foi de ${(media.toFixed(2))} e infelizmente não foi dessa vez
+        `
+    
+    }
+</script>

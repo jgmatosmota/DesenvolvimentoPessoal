@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Nome do produto<br>
+    <input id="in_1"><br>
+    preço original<BR>
+    <input id="in_2"><br>
+    Cupom de desconto<br>
+    <input id="in_3"><br>
+    <button id="btn1" onclick="desc()">Aplicar desconto</button><br>
+    <div id="d1"></div>
+</body>
+</html>
+<script>
+    function desc(){
+     var produto = in_1.value.toUpperCase()
+     var preco = Number(in_2.value)
+     var desc = in_3.value
+     var val1 = produto == ''
+     var val2 = preco == 0
+     var val3 = desc == ''    
+     var inc = val1 || val2 || val3
+     var prod1 = (produto == 'TÊNIS')|| (produto == 'LIVROS') || (produto == 'MATERIAL ESCOLAR')
+     var prod2 = (produto == 'CELULAR') || (produto == 'NOTEBOOK') || (produto == 'TABLET')
+     var cupom1 = desc == 'TECH_19'
+     var cupom2 = desc == 'GERAL_10'
+     if(inc){
+        btn1.disabled=true
+        if(val1){
+            alert(`Insira um produto para prosseguir`)
+        }
+        if(val2){
+            alert(`Insira um preço para prosseguir`)
+        }
+        if(val3){
+            alert(`Insira um cupom de desconto para prosseguir`)
+        }
+    }else if(prod1 && cupom2){
+        d1.innerHTML=`Cupom para produtos em geral aplicado! Preço final será de R$${preco*0.9}`
+    }else if(prod2 && cupom1){
+        d1.innerHTML=`Cupom para produtos tecnológicos foi aplicado! Preço final será de R$${preco*0.81}`
+    }else{
+        d1.innerHTML=`Cupom não aplicado! Preencha os campos e tente novamente`
+    } 
+    
+    
+    
+    }
+</script>

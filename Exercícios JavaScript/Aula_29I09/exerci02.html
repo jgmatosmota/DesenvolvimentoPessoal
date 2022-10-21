@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Altura<br>
+    <input id="in_1"><br>
+    <button onclick="calc()">Analisar para esportes</button><br>
+    <div id="d1"></div>
+</body>
+</html>
+<script>
+    function calc(){
+        var altura = Number(in_1.value)
+        var pilot =  altura < 1.6
+        var fur = altura > 1.6 && altura <= 1.85
+        if (pilot){
+            d1.innerHTML= `Pode ser piloto de corrida<Br>pode ser velejador`
+        }if(fur){
+            d1.innerHTML=`Pode tentar ser jogador de futebol ou handbol`
+        }   
+    }
+</script>

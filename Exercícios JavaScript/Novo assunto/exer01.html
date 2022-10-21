@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Proteina<br>
+    <select name="" id="prot">
+        <option value="ovo">ovo</option>
+        <option value="soja">soja</option>
+        <option value="carne">carne</option>
+    </select>
+    Sobremesa<br>
+    <select name="" id="sob" onchange="calc()">
+        <option value="pudim">pudim</option>
+        <option value="petit">petit gateau</option>
+        <option value="brig">Brigadeiro</option>
+    </select>
+</body>
+</html>
+<script>
+    var protei = ''
+    var sobr = ''
+    function calc(){
+        protei = prot.value
+        sobr = sob.value
+        if(protei == 'soja' && sobr == 'brig'){
+            alert(`vegano`)
+        }else{
+            alert(`nao pode vegano`)
+        }
+    }
+</script>

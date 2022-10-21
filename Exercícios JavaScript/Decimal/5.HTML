@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Valor salário<br>
+    <input id="in_1"><br>
+    <button onclick = calc()>calcular descontos</button><br>
+    <div id="d1">
+
+    </div>
+</body>
+</html>
+<script>
+    function calc(){
+        var bruto = Number(in_1.value)
+        var inss = bruto * 0.1
+        var ir = bruto * 0.2
+        var imp = bruto/30
+        var result = bruto - (inss+ir+imp)
+        alert (`Apesar do seu salário bruto ser R$${(bruto.toFixed(2))}, você receberá apenas ${(result.toFixed(2))}`)
+    }
+
+</script>

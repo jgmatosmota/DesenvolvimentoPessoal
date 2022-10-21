@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="d1">você já clicou 0 vezes</div><br>
+    <button onclick="cliq()">Clique neu</button>
+    <div id="d2"></div>
+</body>
+</html>
+<script>
+    var clique = 0
+    function cliq(){
+            d1.innerHTML = `você já clicou ${++clique} vezes`
+        if(clique <5){
+            d2.innerHTML=`Dedo fraquinho em`
+        }else if (clique <= 10){
+            d2.innerHTML=`Dedo bom mano`
+        }else if (clique <= 15){
+            d2.innerHTML=`Gosta de clicar em`
+        }else{
+            d2.innerHTML=`eita dedo bom em`
+        }
+    }
+</script>

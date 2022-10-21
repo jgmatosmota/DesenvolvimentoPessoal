@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <H1>--------------------QUIOSQUE DO ANTEDEGUEMON--------------------</H1><Br>
+    --------------------ABERTURA DO QUIOSQUE--------------------<br>
+    Agua engarrafada
+    <input id="in_1">
+    Coco fechado
+    <input id="in_2">
+    <button onclick="coco()">Abrir o quiosque</button>
+    <br>--------------------ESTOQUE INICIAL--------------------
+    <br><div id="d1">
+    </div>
+    --------------------REGISTRO DE OPREÇÕES DE VENDA--------------------<Br>
+   Quantidade vendida 
+   <input id="in_3">
+   Produto vendido
+   <select id="sel_1">
+    <option value="agua">agua</option>
+    <option value="coco">coco</option>
+   </select>
+   <button onclick="registrar()">Registrar</button>
+   <button onclick="encerrar()">Encerrar turno</button>
+   <br> <div id="d2">
+    </div>
+    	
+</body>
+</html>
+<script>
+    var agua1 = 0
+    var coco1 = 0
+    var venda1= 0 
+    var venda2 = 0
+function coco(){
+    var agua = Number(in_1.value)
+    var coco = Number(in_2.value)
+    var valida = agua < 100 || coco < 200
+    if(valida){
+        if(agua<100){
+            d1.innerHTML += `Com essa quantidade de Água engarrafada não dá para abrir o quiosque<br>`
+        }
+        if(coco<200){
+            d1.innerHTML+=`Com essa quantidade de Coco fechado não dá para abrir o quiosque<br>`
+        }
+    }else{
+        agua1 = agua
+        coco1 = coco
+        d1.innerHTML=`Agua engarrafada:${agua1}<br>Coco fechado:${coco1}<br>`
+        if(agua >= 100 && agua <= 1000){
+            d1.innerHTML+=`Engarrafe mais agua de coco<br>`
+        }
+        if(coco >= 200 && coco <= 2000){
+            d1.innerHTML+=`Compre mais cocos<br>`
+        }
+         
+    }
+}
+function registrar(){
+    var venda = Number(in_3.value)
+    var select = sel_1.value
+    if(select=='coco'){
+        venda1 = venda1 + venda
+        coco1 = coco1 - venda
+        d2.innerHTML+=`Com a venda de ${venda} ${select} o saldo no estoque é de ${coco1}<Br>`
+    }else{
+        agua1 = agua1 - venda
+        venda2 = venda2 + venda
+        d2.innerHTML+=`Com a venda de ${venda} ${select} o saldo no estoque é de ${agua1}<br>`
+    }
+}
+function encerrar(){
+    var vendaT = venda1 + venda2
+    d1.innerHTML=''
+    d2.innerHTML=''
+    d2.innerHTML=`Vendas de agua engarrafada<br>Saldo de produto no estoque:${agua1}<br>Quantidade de vendas
+    ${venda2}<br>Porcentagem das vendas:${(venda2/vendaT)*100}%<br>`
+    d2.innerHTML+=`Vendas de coco<br>Saldo de produto no estoque:${coco1}<br>Quantidade de vendas
+    ${venda1}<br>Porcentagem das vendas:${(venda1/vendaT)*100}%<br>`
+}
+</script>

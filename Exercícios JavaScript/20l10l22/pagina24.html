@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>QUANTAS PEDRITAS VOCÊ QUER FUMAR HOJE?</h2>
+    <button onclick="repetir()">REPETIR 5X</button>
+    <br>
+    <input placeholder="REPITIR" id="in_repetir"><br>
+    <button onclick="repetir1()">REPETIR N VEZES</button><BR>
+    <div id="repetir5">
+    </div>
+    <div id="crack"></div>
+    
+</body>
+</html>
+<script>
+function repetir(){
+    repetir5.innerHTML=``
+    for(var contador = 0; contador < 5; contador++){
+        repetir5.innerHTML+= `FOCO, FORÇA E FÉ<BR>`
+            
+    }
+}
+
+function repetir1(){
+    repetir5.innerHTML=``
+    var valor = Number(in_repetir.value)
+    for(var contador = 1; contador <= valor; contador++){
+        repetir5.innerHTML+= `${contador} - NUMERO DE PEDRITAS FUMADAS HOJE<BR>`
+      if(contador > 15){
+        crack.innerHTML=`<img src="https://pbs.twimg.com/profile_images/1545739411/cracudo_400x400.jpg" width=80; height=80; >`
+      
+    }      
+    }
+}
+
+</script>

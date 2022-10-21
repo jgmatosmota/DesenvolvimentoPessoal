@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select id="sel_time" onchange="ver_time()">
+        <option value=''>-escolha-</option>
+        <option value="oc">CORINTHIANS</option>
+        <option value="op">Palmeiras</option>
+        <option value="osp">São Paulo</option>
+        <option value="os">Santos</option>
+    </select>
+    <div id="d1"></div>
+</body>
+</html>
+<script>
+    function ver_time(){
+        var tim = sel_time.value
+        if (tim == `oc`){
+            d1.innerHTML=`Salve o corinthians` 
+            d1.style.backgroundColor = 'black'
+            d1.style.color = `white`
+        }else if (tim == `op`){
+            d1.innerHTML=`sem mundial`
+            d1.style.backgroundColor = `green`
+            d1.style.color = `white`
+        }else if(tim == `osp`){
+            d1.innerHTML = `Salve o tricolor`
+            d1.style.backgroundColor = `black`
+            d1.style.color = `red`
+        }else{
+            d1.innerHTML = `agora quem da bola é o santos`
+            d1.style.backgroundColor = `white`
+            d1.style.backgroundColor = `black`
+        }
+    }
+</script>

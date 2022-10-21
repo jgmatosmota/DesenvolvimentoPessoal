@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Altura<br>
+    <input id="in_1" onkeyup="calc()"><br>
+    <div id="d1">
+
+    </div>
+
+</body>
+</html>
+<script>
+    function calc(){
+        var alt1= Number(in_1.value)
+        if(alt1 <= 1.65){
+            d1.innerHTML = `Você pode ser piloto de corrida`
+        }else if (alt1 <= 1.8){
+            d1.innerHTML = `Você pode ser jogador de futebol`
+        }else{
+            d1.innerHTML = `Você pode ser jogador de vôlei ou basquete`
+        }
+    }
+</script>

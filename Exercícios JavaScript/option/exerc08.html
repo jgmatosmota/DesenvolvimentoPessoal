@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Digite seu salário <br>
+    <input id="in_1"><br>
+    <select id="apos">
+        <option value="0.1">INSS</option>
+        <option value="0.2">IR</option>
+        <option value="0.05">VR</option>
+    </select>
+    <button onclick="calc()">Calcular descontos</button>
+    <div id="d1"></div>
+</body>
+</html>
+<script>
+function calc(){
+    var ins = Number(apos.value)
+    var result = ins * Number(in_1.value)
+    d1.innerHTML=`Valor desse desconto:${result.toFixed(2)}`
+}
+</script>

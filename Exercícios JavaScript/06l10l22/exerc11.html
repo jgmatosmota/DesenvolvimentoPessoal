@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Quantos titulos de mundial da fifa o seu time tem?<Br>
+    <input id="in_1"><br>
+    <button onclick="mundial()">ver trofeus de mundial</button><Br>
+    <div id="d1">
+        <img id="img_1" src="" alt="">
+    </div>
+
+</body>
+</html>
+<script>
+    function mundial(){
+        var valor = 0 
+        var mundial = Number(in_1.value)
+        if(mundial <= 0){
+            img_1.src=`https://ogimg.infoglobo.com.br/in/24097293-3e9-4c5/FT1086A/652/x85841104_Soccer-FootballCopa-LibertadoresFinalFlamengo-fans-watching-the-finalRio-de-Jan.jpg.pagespeed.ic.eT6kZdnwDv.jpg`
+        }else{
+            while(valor < mundial){
+                valor++
+                d1.innerHTML +=` <img src="https://placar.abril.com.br/wp-content/uploads/2021/09/esporte-futebol-mundial-de-clubes-final-real-madrid-al-ain-20181222-017-1.jpg">`
+            }
+        }
+    }
+</script>

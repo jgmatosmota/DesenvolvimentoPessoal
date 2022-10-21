@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>      
+    Quantas latinha vc bebe por dia? <br>
+    <input id="in_r"> <br>
+    <button onclick = "ref()">Quant</button>
+    <div id="lat">
+Você bebeu .....
+
+    </div>
+</body>
+</html>
+<script>
+    function ref(){
+        var l= Number(in_r.value)*365
+
+        lat.innerHTML += `${l} por ano`
+        if (l>500)alert("Cuidado com a diabetes")
+
+    }
+
+
+
+</script>

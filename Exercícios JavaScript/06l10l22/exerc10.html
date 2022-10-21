@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Escolha um intervalor de valores crescentes<br>
+    <input id="in_1"><br>
+    
+    <input id="in_2"><br>
+    <button onclick="exibir()">exibir</button>
+    <div id="d1"></div>
+
+</body>
+</html>
+<script>
+    function exibir(){
+        var com = Number(in_1.value)
+        var fim = Number(in_2.value)
+        
+        if(fim<com){
+            alert(`insira uma ordem válida`)
+        }else{
+            while(com<fim){
+             com++
+             if(com % 2 == 0){
+                d1.innerHTML+=`${com}<br>`
+             }
+
+            }
+        }
+    }
+</script>

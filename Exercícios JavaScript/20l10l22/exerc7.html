@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input placeholder="LIMITE INFERIOR" id="in_in"><BR>
+    <input placeholder="LIMITE SUPERIOR" id="in_su"><BR>
+    <input placeholder="divisibilidade" id="">
+    <button onclick="calcular()">Contar</button><br>
+    <div id="mostragem">
+        
+    </div>
+</body>
+</html>
+<script>
+    function calcular(){
+        var limIn = Number(in_in.value)
+        var limSu = Number(in_su.value)
+        var valida1 = 0
+        var valida = limIn > 1 || limSu < 100
+        if(valida){
+            for(;limIn <= limSu;limIn++){
+                if(limIn % 2  == 1){
+                mostragem.innerHTML+=`${limIn}<Br>`
+                }
+            }
+        }else{
+            alert(`Limite superior tem que ser menor que 100 e inferior maior que 1`)
+        }
+    }
+</script>

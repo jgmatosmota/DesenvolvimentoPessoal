@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="shortcut icon" href="assets/img/logo.png" type="image/x-icon">
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/dashboard.css">
+
+    <link rel="stylesheet" href="assets/css/navbar_dashboard.css">
+</head>
+<body>
+    
+    <!-- NAVBAR -->
+    <div class="div_navbar" id="div_navbar">
+        <div class="div_container">
+            <div class="div_menu" onclick="expandir_navbar(1)">
+
+                <div id="menu_solo">
+                    <i class='bx bx-menu bx-md'></i>
+                </div>
+                <div id="menu_conjunto">
+                    <i class='bx bx-menu bx-md'></i>
+                    Menu
+                </div>
+            </div>
+            <div class="div_icons_navbar">
+                <div class="div_icon" id="div_icon1">
+
+                    <div id="div_icon_solo1"
+                        onclick="window.location.href='dashboard.html'"
+                    >
+                        <i 
+                            class='bx bxs-dashboard'  
+                            style="font-size: 30px;"
+                        ></i>
+                    </div>
+                    <div 
+                        id="div_icon_conjunto1" 
+                        class="div_icon_conjunto" 
+                        style="display: none; gap: 10px;"
+                        onclick="window.location.href='dashboard.html'"
+                        >
+                        <i 
+                            class='bx bxs-dashboard'  
+                            style="font-size: 30px;"
+                        ></i>
+                        <span id="s_icon_texto">
+                            Dashboard
+                        </span>
+                    </div>
+                </div>
+                <div class="div_icon" id="div_icon2">
+
+                    <div id="div_icon_solo2"
+                    onclick="window.location.href='dashboard2.html'"
+                    >
+                        <i 
+                            class='bx bxs-objects-vertical-bottom'
+                            style="font-size: 30px;"
+                        ></i>
+                    </div>
+                    <div 
+                        id="div_icon_conjunto2" 
+                        style="display: none; gap: 10px;"
+                        onclick="window.location.href='dashboard2.html'"
+                        > 
+
+                        <i 
+                            class='bx bxs-objects-vertical-bottom'
+                            style="font-size: 30px;"
+                        ></i>
+                        <span>
+                            Gráficos
+                        </span>
+                    </div>
+                </div>
+                <div class="div_icon" id="div_icon3">
+
+                    <div id="div_icon_solo3"
+                    onclick="window.location.href='dashboard2.html'"
+                    >
+                        <i 
+                            class='bx bx-cog bx-sm'
+                            style="font-size: 30px;"
+                        ></i>
+                    </div>
+
+                    <div  
+                        id="div_icon_conjunto3" 
+                        style="display: none; gap: 10px;"
+                        onclick="window.location.href='dashboard2.html'"
+                    > 
+                        <i 
+                            class='bx bx-cog bx-sm'
+                            style="font-size: 30px;"
+                        ></i>
+                        <span id="s_icon_texto">
+                            Configurações
+                        </span>
+                    </div>
+                </div>
+
+                <div class="div_icon_exit"
+                onclick="window.location.href='index.html'"
+                >
+                    <i 
+                        class='bx bx-exit'
+                    ></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="div_main">
+        <!-- HEADER -->
+        <div class="div_header">
+            <div class="div_usuario">
+                <i class='bx bxs-user-circle bx-lg' style='color:#174580'  ></i>
+                <p>Olá, Fernanda</p>
+            </div>
+        </div>
+
+        <!-- KPI E INFORMATIVOS UNITÁRIOS -->
+        <div class="div_kpi">
+            <div class="div_container">
+                <div class="div_vacina" onclick="window.location.href='dashboard2.html'">
+                    <div class="div_nome_vacina" >
+                        <span>Vacina P</span>
+                    </div>
+                    <div class="div_marcadores">
+                        <div class="div_forma_marcador div_marcador_setor">
+                            <span class="s_titulo">Total de setores</span>
+                            <span>123</span>
+                        </div>
+                        <div class="div_forma_marcador div_marcador_min">
+                            <span class="s_titulo">Temperatura máxima</span>
+                            <span>-57 °C</span>
+                        </div>
+                        <div class="div_forma_marcador div_marcador_max">
+                            <span class="s_titulo">Amplitute máxima</span>
+                            <span>-29 °C</span>
+                        </div>
+                        <div class="div_forma_marcador div_amplitute">
+                            <span class="s_titulo">Temperatura Miníma</span>
+                            <span>-28 °C</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="div_vacina" onclick="window.location.href='dashboard2.html'">
+                    <div class="div_nome_vacina">
+                        <span>Vacina T</span>
+                    </div>
+                    <div class="div_marcadores">
+                        <div class="div_forma_marcador div_marcador_setor">
+                            <span class="s_titulo">Total de setores</span>
+                            <span>243</span>
+                        </div>
+                        <div class="div_forma_marcador div_marcador_min">
+                            <span class="s_titulo">Temperatura máxima</span>
+                            <span>-59 °C</span>
+                        </div>
+                        <div class="div_forma_marcador div_marcador_max">
+                            <span class="s_titulo">Amplitute máxima</span>
+                            <span>-38 °C</span>
+                        </div>
+                        <div class="div_forma_marcador div_amplitute">
+                            <span class="s_titulo">Temperatura Miníma</span>
+                            <span>-21 °C</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="div_vacina" onclick="window.location.href='dashboard2.html'">
+                    <div class="div_nome_vacina">
+                        <span>Vacina O</span>
+                    </div>
+                    <div class="div_marcadores">
+                        <div class="div_forma_marcador div_marcador_setor">
+                            <span class="s_titulo">Total de setores</span>
+                            <span>96</span>
+                        </div>
+                        <div class="div_forma_marcador div_marcador_min">
+                            <span class="s_titulo">Temperatura máxima</span>
+                            <span>-63 °C</span>
+                        </div>
+                        <div class="div_forma_marcador div_marcador_max">
+                            <span class="s_titulo">Amplitute máxima</span>
+                            <span>-36 °C</span>
+                        </div>
+                        <div class="div_forma_marcador div_amplitute">
+                            <span class="s_titulo">Temperatura Miníma</span>
+                            <span>-27 °C</span>
+                        </div>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+
+        <!-- CONTEXTO E GRÁFICOS -->
+        <div class="div_contexto_grafico">
+            <!-- CONTEXTO -->
+
+            <div class="div_principal_contexto">
+                <div class="div_contexto">
+                    <h2>Contexto</h2>
+                    <div class="div_contexto_marcadores">
+        
+                        <div class="div_dupla_marcadores">
+                            <div class="div_forma_contexto_marcador div_marcador_setor">
+                                <span class="contexto_s_titulo">Total de setores</span>
+                                <span class="s_valores">999</span>
+                            </div>
+                            <div class="div_forma_contexto_marcador div_marcador_min">
+                                <span class="contexto_s_titulo">Temperatura máxima</span>
+                                <span class="s_valores">-90 °C</span>
+                            </div>
+                        </div>
+                        <div class="div_dupla_marcadores">
+                            <div class="div_forma_contexto_marcador div_marcador_max">
+                                <span class="contexto_s_titulo">Amplitute máxima</span>
+                                <span class="s_valores">-80 °C</span>
+                            </div>
+                            <div class="div_forma_contexto_marcador div_amplitute">
+                                <span class="contexto_s_titulo">Temperatura Miníma</span>
+                                <span class="s_valores">-10 °C</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="div_legenda">
+                        <img src="" alt="">
+                    </div>
+                </div>
+            </div>
+    
+            <div class="div_espacamento"></div>
+            <!-- GRÁFICOS -->
+            <div class="div_graficos">
+    
+                
+                <div class="div_chart_principal">
+                    <h2>Manutenção</h2>
+                    <div class="div_chart_manutencao">
+                        <div class="div_chart_box">
+                            <h3>Geladeiras Instáveis</h3>
+    
+                            <div class="div_grafico_singular">
+                                <canvas class="chart_manutencao"  id="myChart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="div_chart_principal">
+                    <h2>Setores/Geladeiras</h2>
+                    <div class="div_chart_setores">
+                        
+                        <div class="div_chart_box">
+                            <h3>Tipos de Resfriamento</h3>
+    
+                            <div class="div_grafico_singular">
+                                <canvas class="chart_setores" id="myChart1"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="div_chart_principal">
+                    <h2>Medicamentos</h2>
+                    <div class="div_chart_medicamentos">
+            
+                        <div class="div_chart_box">
+                            <h3>Capacidade de Armazenamento</h3>
+                            <div class="div_grafico_singular">
+    
+                                <canvas class="chart_medicamentos" id="myChart2"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script src="assets/js/navbar_dashboard.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+</html>
+
+<script>
+
+   
+
+</script>
+
+
+
+
+
+
+
+<script>
+
+    //CONSTANTE DAS CORES DOS GRÁFICOS 
+    // Isso também é um VETOR
+    const color = [
+        '#e6903a', 
+        '#2866b8'
+    ];
+    
+    
+
+    // GRÁFICO GELADEIRAS INSTÁVEIS
+    const labels = [
+      'Requer Manutenção',
+      'Não Requer',
+    ];
+  
+    const data = {
+      labels: labels,
+      datasets: [{
+        label: 'Requer',
+        backgroundColor: color,
+        borderColor: 'rgb(255, 255, 255)',
+        data: [20, 15],
+      }
+    ]
+    };
+  
+    const config = {
+      type: 'pie',
+      data: data,
+      options: {
+        responsive: true,
+            plugins: {
+                legend: {
+                    position: 'bottom',
+                },
+                title: {
+                    display: false,
+                }
+            }
+      }
+    };
+
+
+
+
+    //GRÁFICO TIPO DE RESFRIAMENTO 
+    const labels1 = [
+      'Temperatura Média -70',
+      'Temperatura Média 5.5',
+    ];
+  
+   
+    const data1 = {
+      labels: labels1,
+      datasets: [{
+        backgroundColor: color,
+        borderColor: 'rgb(255, 255, 255)',
+        data: [15, 85],
+      }]
+    };
+  
+    const config1 = {
+        type: 'pie',
+        data: data1,
+        options: {
+            responsive: true,
+            plugins: {
+                legend: {
+                    position: 'bottom',
+                },
+                title: {
+                    display: false,
+                }
+            }
+        },
+      
+    };
+
+
+
+
+
+    // GRÁFICO CAPACIDADE DE ARMAZENAMENTO
+    const labels2 = [
+      'Medicamentos',
+      'Capacidade Total',
+    ];
+  
+    const data2 = {
+      labels: labels2,
+      datasets: [{
+        label: 'My First dataset',
+        backgroundColor: color,
+        borderColor: 'rgb(255, 255, 255)',
+        data: [43.33, 56.66],
+      }]
+    };
+  
+    const config2 = {
+      type: 'pie',
+      data: data2,
+      options: {
+        responsive: true,
+            plugins: {
+                legend: {
+                    position: 'bottom',
+                },
+                title: {
+                    display: false,
+                }
+            }
+      }
+    };
+</script>
+
+<script>
+    const myChart = new Chart(
+      document.getElementById('myChart'),
+      config
+    );
+
+    const myChart1 = new Chart(
+      document.getElementById('myChart1'),
+      config1
+    );
+
+    const myChart2 = new Chart(
+      document.getElementById('myChart2'),
+      config2
+    );
+</script>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Nome 
+    <input id="in_1"><br>
+    Saldo 
+    <input id="in_2"><br>
+    <button onclick="calc()">verificar conta</button><br>
+    <div id="d1">
+
+    </div>
+</body>
+</html>
+<script>
+    function calc(){
+        var no = in_1.value
+        var sal = Number(in_2.value)
+        var neg = 0 - sal
+        if (sal < 0){
+            d1.innerHTML = `Com o saldo de ${neg} o cliente ${no} está com saldo devedor`
+        }else if (sal <= 2000){
+            d1.innerHTML = `Com o saldo de ${sal} o cliente ${no} está com saldo normal`
+        }else if (sal <= 5000){
+            d1.innerHTML = `Com o saldo de ${sal} o cliente ${no} está com saldo acima da média`
+        }else {
+            d1.innerHTML = `Com o saldo de ${sal} o cliente ${no} tem perfil de investidor`
+        }
+    }
+</script>

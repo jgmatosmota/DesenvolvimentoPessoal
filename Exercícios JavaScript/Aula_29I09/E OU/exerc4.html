@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Nota<Br>
+    <input id="in_1"><br>
+    frequência<Br>
+    <input id="in_2"><Br>
+    <button onclick="calc()">Analisar aluno</button><br>
+    <div id="d1"></div>    
+</body>
+</html>
+<script>
+    function calc(){
+        var nota = Number(in_1.value)
+        var freq = Number(in_2.value)
+        var inv = nota < 0 || nota > 10
+        var freqi = freq < 0 || freq > 100
+        var val = (nota >= 0 && nota <= 10) && (freq >= 0 && freq <= 100)
+        var notaam = nota >= 0 && nota < 6 
+        var notam = nota >= 6 && nota <= 8 
+        var notaac = nota > 8 && nota  <= 10
+        var freqn = freq < 75
+        var freqss = freq >= 75 && freq <= 100
+        if (inv){
+            alert(`Onde já se viu nota <0 ou >10`)
+                d1.innerHTML = ``
+        }if(freqi){
+            alert(`Onde já se viu frequência <0 ou >100`)
+                d1.innerHTML = ``
+        }else if(val){
+             if(notaam){
+                d1.innerHTML+=`<br>Aluno ficou abaixo da média`
+            }
+            else if(notam){
+                d1.innerHTML+=`<br>Aluno ficou na média`
+            }
+             else if(notaac){
+                d1.innerHTML+=`<br>Aluno acima da média`
+            }
+             if(freqn){
+                d1.innerHTML+=`<Br>Aluno reprovado por frenquência`
+            }
+            else if(!freqn){
+                d1.innerHTML+=`<br>Aluno aprovado por frequência`
+            }
+        }
+    }
+</script>

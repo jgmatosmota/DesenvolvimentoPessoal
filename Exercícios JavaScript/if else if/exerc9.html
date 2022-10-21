@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Sua meta de economia<br>
+    <input id="in_1"><br>
+    Quanto tem guardado<br>
+    <input id="in_2"><br>
+    <button onclick="calc()">calcular</button>
+    <div id="d1"></div>
+    
+</body>
+</html>
+<script>
+    function calc(){
+        var eco = Number(in_1.value)
+        var guar = Number(in_2.value)
+        var mais = guar - eco
+        var menos = eco - guar
+        if(guar == eco){
+            d1.innerHTML=`Parabéns meta alcançada`
+        }else if (guar > eco){
+            d1.innerHTML = `Parabéns meta alcançada<br>Meta ultrapassada em R$${mais}`
+        }else if (guar < eco){
+            d1.innerHTML=`Força, ainda em busca da meta! Faltam só R$${menos}`
+        }
+    }
+</script>

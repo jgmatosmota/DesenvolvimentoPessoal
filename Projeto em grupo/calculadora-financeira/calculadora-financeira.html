@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Financeira</title>
+</head>
+<body>
+
+        <br>
+    <h1>Calculadora Financeira</h1>
+        <br>
+    <p>Em média no Brasil são desperdiçados 40% de doses de vacinas por falta de gestão na hora do armazenamento delas, falta de insfraestrutura e cuidado.</p>
+        <br>
+    SELECIONE A VACINA COMPRADA: <select name="" id="sel_vacinas">
+        <option value="AstraZeneca">AstraZeneca</option>
+        <option value="Johnson">Johnson & Johnson</option>
+        <option value="Sanofi">Sanofi / GSK</option>
+        <option value="Biontech">BioNTech / Pfizer</option>
+        <option value="CureVac">CureVac</option>
+        <option value="Moderna">Moderna</option>
+    </select>
+        <br> <br>
+    QUANTAS DOSES FORAM COMPRAS: <input type="text" id="in_doses">
+        <br> <br>
+    QUANTOS SETORES TEM NA SUA EMPRESA: <input type="text" id="in_setor">   
+        <br> <br>
+        <button onclick="resultado()">Calcule suas Perdas</button>
+        <br><br>
+    
+    <div id="div_resultado"></div>
+
+</body>
+</html>
+
+<script>
+
+    var cotacao = Number(5.09)
+
+        function resultado() {
+
+            var vacina = (sel_vacinas.value)
+            var setor = Number(in_setor.value)
+            
+
+            var astrazeneca = cotacao * 1.78
+            var johnson = cotacao * 6.94
+            var sanofi = cotacao * 7.56
+            var biontech = cotacao * 12
+            var curevac = cotacao * 10
+            var moderna = cotacao * 14.70
+
+            var dose = Number(in_doses.value).toFixed(2);
+
+            if (vacina == 'AstraZeneca') {
+                var total = (astrazeneca * dose).toFixed(2)
+                var perda = (total * 0.4).toFixed(2)
+
+            } else if (vacina == 'Johnson') {
+                var total = (johnson * dose).toFixed(2)
+                var perda = (total * 0.4).toFixed(2)
+
+            } else if (vacina == 'Sanofi') {
+                var total = (sanofi * dose).toFixed(2)
+                var perda = (total * 0.4).toFixed(2)
+
+            } else if (vacina == 'Biontech') {
+                var total = (biontech * dose).toFixed(2)
+                var perda = (total * 0.4).toFixed(2)
+
+            } else if (vacina == 'CureVac') {
+                var total = (curevac * dose).toFixed(2)
+                var perda = (total * 0.4).toFixed(2)
+
+            } else if (vacina == 'Moderna') {
+                var total = (moderna * dose).toFixed(2)
+                var perda = (total * 0.4).toFixed(2)
+
+            }
+            var tempo = ((setor * 1000)/(perda))
+            div_resultado.innerHTML = `Foram comprados R$ ${total} de Vacinas da ${vacina} para este lote.
+                Caso não tenha a devida administração da temperatura das vacinas, 
+                vocês terão uma perda de 40% deste lote totalizando R$ ${perda}.`
+            div_resultado.innerHTML += `<br>Com um investimento de R$1000.00 por dispositivo, sua empresa recuperaria o investimento em ${tempo.toFixed(0)} meses!`
+
+        }
+
+</script>

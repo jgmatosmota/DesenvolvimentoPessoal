@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    limite superior da amostragem<br>
+    <input id="in_superior">
+    <button onclick="contar()">Contar</button><br>
+    <div id="contagem">
+
+    </div>
+</body>
+</html>
+<script>
+    function contar(){
+        var superior = Number(in_superior.value)
+        if(superior<100){
+            for(var contador= 5;contador <= superior;contador++){
+                contagem.innerHTML+=`${contador}<br>`
+            }
+
+        }else{
+            alert(`Limite superior tem que ser menor que 100`)
+        }
+    }
+</script>

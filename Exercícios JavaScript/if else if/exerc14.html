@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="d1">vida do lutador:1000</div><br>
+    <div id="d2"></div>
+    <img src="https://www.infomoney.com.br/wp-content/uploads/2019/06/anderson-silva-ufc.jpg?fit=900%2C1418&quality=50&strip=all"
+     id="luta1" style="height: 450px;"
+     >
+     <button id='btn1' onclick="cal1()">Apanhar</button>
+     <button id='btn2' onclick="cal2()">Concentrar força</button>
+     
+
+</body>
+</html>
+<script>
+    // Tentei usar RETURN ou fazer em o código em loop mas não consegui, por enquanto pelo menos :(
+    var vida = 1000
+    function cal1(){
+        vida = vida - 100
+        d1.innerHTML=`vida do lutador:${vida.toFixed(2)}`
+        if (vida <= 0){
+            d2.innerHTML=`Lutador já era`
+            luta1.src=`http://s2.glbimg.com/ABOs8-EqJoBAuSagPRQuB1Ls8Zs=/640x0/smart/s.glbimg.com/es/ge/f/original/2013/12/29/andersonsilva_lesao5_reu_95.jpg`
+            btn2.disabled=true
+            btn1.disabled=true
+        }else{
+            d2.innerHTML=`Lutador ainda vivo`
+        }
+    
+    
+    }
+    function cal2(){
+        var cinco = vida * 0.05
+        vida = vida + cinco
+        d1.innerHTML=`vida do lutador:${vida.toFixed(2)}`
+        if (vida <= 0){
+            d2.innerHTML=`Lutador já era`
+            luta1.src=`http://s2.glbimg.com/ABOs8-EqJoBAuSagPRQuB1Ls8Zs=/640x0/smart/s.glbimg.com/es/ge/f/original/2013/12/29/andersonsilva_lesao5_reu_95.jpg`
+            btn1.disabled=true
+            btn2.disabled=true
+        }else{
+            d2.innerHTML=`Lutador ainda vivo`
+        }
+    
+    }
+</script>

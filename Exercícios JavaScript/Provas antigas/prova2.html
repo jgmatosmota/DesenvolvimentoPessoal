@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bebe pouco ou muito?</title>
+</head>
+<body>
+    
+    <input placeholder="Quantas taças" id="in_tacas"> <br>
+    <input placeholder="Preço da taça" id="in_preco"> <br>
+    Qual sua tolerância a álcool? <select id="sel_tipo">
+        <option value="fraco">Fraco pra bebida</option>
+        <option value="medio">Bebe todo final de semana</option>
+        <option value="brabo">Só fica bêbado com Querosene</option>
+    </select>
+    <br>
+    <button onclick="beber()">Tomar vinho</button>
+
+    <div id="d1"></div>
+    <img id="imgB">
+
+</body>
+</html>
+<script>
+    
+    function beber() {
+        var preco = Number(in_preco.value)
+        var taca = Number(in_tacas.value)
+        var tipo = sel_tipo.value
+        var imagem = ""
+        var valid = preco < 0.01
+        var valid1 = taca < 0 && taca > 30
+
+        d1.innerHTML = ``
+
+        if(valid1) {
+            alert(`Só é possível beber de 0 a 30 taças`)
+        }else if (valid) {
+            alert(`Onde já se viu vinho grátis?`)
+        }else{
+            d1.innerHTML = `<br> zé buduia tomou um total de ${taca} taças de vinho, pagando R$ ${taca*preco} por isso<br>`
+            
+            if(tipo == 'fraco') {
+                if (taca>=1 && taca<=2) {
+                    imagem = `./levemente.png`
+                } else if (taca>=3 && taca<=4) {
+                    imagem = `./visivelmente.png`
+                } else if (taca>=5) {
+                    imagem = `./superbebado.png`
+                }
+            }else if(tipo == 'medio') {
+                if(taca>=3 && taca<=4) {
+                    imagem = `./levemente.png`
+                }else if(taca>=5 && taca<=7) {
+                    imagem = `./visivelmente.png`
+                }else if(taca>=8) {
+                    imagem = `./superbebado.png`
+                }
+            }else if(tipo == 'brabo') {
+                if(taca>=10 && taca<=13) {
+                    imagem = `./levemente.png`
+                }else if(taca>=14 && tacas<=19) {
+                    imagem = `./visivelmente.png`
+                }else if(taca>=20) {
+                    imagem = `./superbebado.png`
+                }
+            }
+            imgB.src = `${imagem}`
+
+        }
+
+
+    }
+
+</script>

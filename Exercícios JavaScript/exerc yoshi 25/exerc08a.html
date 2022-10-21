@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="exer09.css">
+    <title>Document</title>
+</head>
+<body>
+    Quantidade de homens <br>
+    <input id="in_1"><br>
+    Quantidade de mulheres <br>
+    <input id="in_2"><br>
+    <Button onclick = "calc()">Analisar peso</Button><br>
+    <div id="d1"></div>
+</body>
+</html>
+<script>
+    function calc(){
+        var v1 = Number(in_1.value)
+        var v2 = Number (in_2.value)
+        var v3 = v1 * 80
+        var v4 = v2 * 60
+        var v5 = v3 + v4
+        
+        d1.innerHTML = `Este elevador suporta 800kg e o peso estimado é de ${v5}`
+        if (v5 > 800) d1.innerHTML += `<br>Será necessário alguem descer para que o elevador funcione`
+        if (v5 > 800 && v5 < 1000) d1.classList.add("t1");
+        if (v5 => 1000) d1.classList.add("t2");
+
+
+    }
+
+</script>

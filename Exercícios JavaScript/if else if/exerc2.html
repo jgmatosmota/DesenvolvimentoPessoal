@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Informe renda mensal familiar<br>
+    <input id="in_1"><br>
+    <button onclick="func()">calcular</button>
+    <div id="d1"></div>
+</body>
+</html>
+<script>
+    function func(){
+        var renda = Number(in_1.value)
+        if (renda <= 250){
+            d1.innerHTML=`Classe E`
+        }else if(renda <= 900){
+            d1.innerHTML=`Classe D`
+        }else if (renda <= 2500){
+            d1.innerHTML=`Classe C`
+        }else if (renda <= 9500){
+            d1.innerHTML=`Classe B`
+        }else{
+            d1.innerHTML=`Classe A`
+        }
+    }
+</script>

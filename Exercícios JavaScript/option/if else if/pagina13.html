@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Teste de saúde</h2>
+    Quantos passos você da por dia?
+    <input id="in_1" onkeyup="anali()">
+    <div id="d1"></div>
+</body>
+</html>
+<script>
+    function anali(){
+        var passos = Number(in_1.value)
+        var analise = 'você é '
+    
+        if (passos < 200){
+            analise += 'muito sedentário'
+        }else if (passos<=2000){
+            analise += 'sedentário'
+        }else if (passos <= 5000){
+            analise += 'Não é sedentário'
+        }else {
+            analise += 'Quase atleta'
+        }
+    d1.innerHTML= analise
+    
+    
+    }
+
+
+</script>

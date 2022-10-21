@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    quanto economizou<br>
+    <input id="in_1"><br>
+    <button onclick="calc()">Poder de compra</button>
+    <div id="d1"></div>
+</body>
+</html>
+<script>
+function calc(){
+    var valor = Number(in_1.value)
+    if (valor <=0){
+        d1.innerHTML=`Nada de Compras 🥲`
+    }else if(valor <= 100){
+        d1.innerHTML = `Viagem de ida e volta pra praia grande<br>`
+    }else if (valor < 4000){
+        d1.innerHTML = `Viagem de ida e volta pra praia grande<br>uma boa moto usada<br>`
+    }else{
+        d1.innerHTML = `Viagem de ida e volta pra praia grande<br>uma boa moto usada<br>e um red label`
+    }
+}
+
+</script>
