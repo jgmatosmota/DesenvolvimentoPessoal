@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="C:\Users\jgmat\Documents\Linkedin\DesenvolvimentoPessoal\Projeto pessoal\CSS\main.css">
+</head>
+<style>
+.c_back {
+background: url("images/background2.jpg"); 
+  min-height: 100%;
+  width: 100%;
+  position: fixed;
+}
+</style>
+
+<body>
+
+    <div class="header">
+        <img src="images\Um anel2.png" class="c_logo" onclick="historiaCam()">
+        <div id="d_botao" class="c_botao">
+
+            <button onclick="loginCam()">Login</button> <button onclick="cadastroCam()">Cadastre-se</button>
+            <button onclick="historiaCam()">História</button><button onclick="jogoCam()">Jogo</button>
+        </div>
+    </div>
+    <div id="back" class="c_back">
+
+        <div id="container" class="c_container">
+            <div id="formulario" class="c_formulario">
+                <label for="in_usuario">
+                    <b>USUARIO</b>
+                </label><Br>
+                <input id="in_usuario" class="c_input" placeholder="Gandalf"><br><br>
+                <label for="in_email">
+                   <b>E-MAIL</b> 
+                </label><Br>
+                <input id="in_email" class="c_input" placeholder="example@sptech.school"><br><br>
+                <label for="in_senha">
+                    <b>SENHA</b> 
+                </label><Br>
+                <input id="in_senha" class="c_input" type="password" placeholder="********"><br><br>
+                <label for="in_senhaConf">
+                  <b>CONFIRMAÇÃO DE SENHA</b>  
+                </label><Br>
+                <input id="in_senhaConf" class="c_input" type="password" placeholder="********"><br><br>
+                <button onclick="cadastrar()">CADASTRAR!</button>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

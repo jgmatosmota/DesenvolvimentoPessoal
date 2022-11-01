@@ -1,0 +1,48 @@
+body{
+margin: 0;
+font-family: Ringbearer;
+
+}
+.c_container{
+    display: flex;
+    justify-content: center;
+}
+
+.header {
+    overflow: hidden;
+    background-color: #000000;
+    padding: 20px 10px;
+}
+  
+.c_botao{
+    display: flex;
+    justify-content: center;
+    margin: 0px 353px 0px 353px;
+    width: 50%;
+}
+button{
+    background-color: transparent;
+    color: white;
+    justify-content: center;
+    margin: 15px;
+    cursor: pointer;
+    margin-top: 19px;
+    font-family: Ringbearer;
+    font-size: large;
+    
+}
+.c_logo{
+    float: left;
+    width: 70px;
+    height: 70px; 
+    margin: 0%;
+    top: 0;
+    cursor: pointer;
+    margin-left: 35px;
+}
+.c_formulario{
+    margin-top: 120px;
+}
+.c_input{
+    font-family: Ringbearer;
+}
