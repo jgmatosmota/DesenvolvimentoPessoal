@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="C:\Users\jgmat\Documents\Linkedin\DesenvolvimentoPessoal\Projeto pessoal\CSS\main.css">
+</head>
+<style>
+    .c_back {
+        background: url("images/background2.jpg");
+        min-height: 100%;
+        width: 100%;
+        position: fixed;
+        margin-top: -1px;
+    }
+
+    .c_papiroHist {
+        background: url(images/vintage_paper_background_2708.jpg);
+        margin: 0 auto;
+        margin-top: 70px;
+        min-height: 65%;
+        width: 70%;
+        position: fixed;
+        border-radius: 0%;
+        box-shadow: 0px 0px 3px 3px rgb(41, 41, 41);
+        /* margin-top: 160px;
+        margin-left: 300px; */
+        /* display: flex;
+        flex-direction: column;
+        justify-content: center; */
+        /* width: 250px;
+        height: 300px; */
+
+
+
+    }
+
+    .c_img {
+        margin-top: 218px;
+        margin-left: 498px;
+        cursor: pointer;
+    }
+    .c_texto{
+        margin-top: 10px;
+        margin-left: 60px;
+        margin-right: 60px;
+    }
+</style>
+
+<body>
+
+    <div class="header">
+        <img src="images\Um anel2.png" class="c_logo" onclick="historiaCam()">
+        <div id="d_botao" class="c_botao">
+
+            <button onclick="historiaCam()">História</button><button onclick="jogoCam()">Jogo</button>
+            <button onclick="loginCam()">Login</button> <button onclick="cadastroCam()">Cadastre-se</button>
+        </div>
+    </div>
+    <div id="back" class="c_back">
+        <div id="container" class="c_container">
+            <div id="papiroH" class="c_papiroHist" style="display: none;">
+               <table style="width: 100%; height:100%;">
+                <tr>
+                    <td style="width: 30%;" > <img src="images/imgbin_human-behavior-thought-art-gandalf-png.png" width="100%" height="90%"></td>
+                    <td style="width: 40%;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae amet iure, tempora magni dignissimos dolor ea perspiciatis inventore praesentium eveniet. Ea exercitationem architecto natus perferendis aperiam laudantium deleniti hic cupiditate?</td>
+                    <td style="width: 30%;"> <img src="images/imgbin_sauron-samwise-gamgee-gandalf-frodo-baggins-drawing-png.png" width="100%" height="100%"></td>
+                </tr>
+               </table>
+
+            </div>
+        </div>
+        <div id="quest1" class="c_quest1">
+            <img src="images/Quest_Main_Available_Icon_001.png" class="c_img" width="60px" height="60px" onclick="mostrarHistoria()">
+        </div>
+    </div>
+
+</body>
+<script src="Funções.js"></script>
+
+</html>
