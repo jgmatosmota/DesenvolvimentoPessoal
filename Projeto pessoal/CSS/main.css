@@ -11,7 +11,7 @@ font-family: Ringbearer;
 .header {
     overflow: hidden;
     background-color: #000000;
-    padding: 20px 10px;
+    padding: 5px 10px;
 }
   
 .c_botao{
@@ -53,7 +53,7 @@ button{
     
 }
 input::placeholder {
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
   }
 .c_cadastrar{
     margin-bottom: 30px;
