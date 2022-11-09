@@ -1,0 +1,1 @@
+pesquisar sobre parametrizar algo em funções javascript
