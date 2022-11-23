@@ -13,8 +13,10 @@
         <div id="d_botao" class="c_botao">
 
             <button onclick="historiaCam()">História</button><button onclick="jogoCam()">Jogo</button>
-            <button onclick="loginCam()">Login</button> <button onclick="cadastroCam()">Cadastre-se</button>
+            <button onclick="loginCam()">Login</button> <button onclick="cadastroCam()">Cadastre-se</button> 
+        
         </div>
+        <span id="nome_span" class="c_nomeUsuario"></span>       
     </div>
     <div id="back" class="c_back">
         <div id="container" class="c_container">
@@ -50,4 +52,5 @@
 </html>
 <script>
     var contador= 0 
+    nome_span.innerHTML=sessionStorage.NOME_USUARIO
 </script>

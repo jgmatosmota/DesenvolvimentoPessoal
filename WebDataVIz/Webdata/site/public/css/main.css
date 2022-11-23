@@ -10,14 +10,19 @@ font-family: Ringbearer;
 
 .header {
     overflow: hidden;
+    position: relative;
     background-color: #000000;
     padding: 5px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 20px;
 }
   
 .c_botao{
     display: flex;
     justify-content: center;
-    margin: 0px 353px 0px 353px;
+    margin: 0px 423px 0px 353px;
     width: 50%;
 }
 button{
@@ -38,7 +43,6 @@ button{
     margin: 0%;
     top: 0;
     cursor: pointer;
-    margin-left: 35px;
 }
 .c_formulario{
     margin-top: 20px;
@@ -141,4 +145,10 @@ input::placeholder {
     
 
     
+}
+.c_nomeUsuario{
+    color: white;
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
 }

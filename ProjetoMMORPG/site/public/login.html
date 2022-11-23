@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<!-- <style>
+    .c_back {
+        background: url("images/background2.jpg");
+        min-height: 100%;
+        width: 100%;
+        position: fixed;
+        margin-top: -1px;
+    }
+
+    .c_papiro {
+        background: url(images/vintage_paper_background_2708.jpg);
+        margin: 0 auto;
+        margin-top: 160px;
+        min-height: 30%;
+        width: 20%;
+        position: fixed;
+        border-radius: 15%;
+        box-shadow: 0px 0px 3px 3px rgb(41, 41, 41);
+        /* display: flex;
+        flex-direction: column;
+        justify-content: center; */
+        /* width: 250px;
+        height: 300px; */
+
+
+
+    }
+</style> -->
+
+<body>
+
+    <div class="header">
+        <img src="assets/images\Um anel2.png" class="c_logo" onclick="historiaCam()">
+        <div id="d_botao" class="c_botao">
+
+            <button onclick="historiaCam()">História</button><button onclick="sobreCam()">Sobre</button>
+            <button onclick="loginCam()">Login</button> <button onclick="cadastroCam()">Cadastre-se</button>
+        </div>
+    </div>
+    <div id="back" class="c_back">
+
+        <div id="container" class="c_container">
+            <div id="papiro" class="c_papiro_login">
+
+                <div id="formulario" class="c_formulario_login">
+                    <label for="in_usuario">
+                        <b>E-MAIL</b>
+                    </label><Br>
+                    <input id="in_email" class="c_input" placeholder="Gandalf@sptech.school"><br><br>
+                    <label for="in_senha">
+                        <b>SENHA</b>
+                    </label><Br>
+                    <input id="in_senha" class="c_input" type="password" placeholder="********"><br><br>
+                    <button onclick="entrar()" class="c_cadastrar">LOGAR!</button>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="js/Funções.js"></script>
+
+</html>
+<script>
+
+
+    function entrar() {
+
+        var emailVar = in_email.value;
+        var senhaVar = in_senha.value;
+
+        if (emailVar == "" || senhaVar == "") {
+            alert(`Insira alguma informação válida`)
+            return false;
+        }
+
+        console.log("FORM LOGIN: ", emailVar);
+        console.log("FORM SENHA: ", senhaVar);
+
+        fetch("/usuarios/autenticar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                emailServer: emailVar,
+                senhaServer: senhaVar
+            })
+        }).then(function (resposta) {
+            console.log("ESTOU NO THEN DO entrar()!")
+
+            if (resposta.ok) {
+                console.log(resposta);
+
+                resposta.json().then(json => {
+                    console.log(json);
+                    console.log(JSON.stringify(json));
+
+                    sessionStorage.EMAIL_USUARIO = json.emailUsuario;
+                    sessionStorage.NOME_USUARIO = json.nomeUsuario;
+                    sessionStorage.ID_USUARIO = json.idUsuario;
+
+                });
+                historiaCam();
+            } else {
+
+                console.log("Houve um erro ao tentar realizar o login!");
+
+                resposta.text().then(texto => {
+                    console.error(texto);
+                });
+            }
+
+        }).catch(function (erro) {
+            console.log(erro);
+        })
+
+        return false;
+    }
+
+    function sumirMensagem() {
+        cardErro.style.display = "none"
+    }
+
+</script>
