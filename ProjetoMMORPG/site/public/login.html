@@ -5,34 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/main.css">
 </head>
-<!-- <style>
-    .c_back {
-        background: url("images/background2.jpg");
-        min-height: 100%;
-        width: 100%;
-        position: fixed;
-        margin-top: -1px;
-    }
 
-    .c_papiro {
-        background: url(images/vintage_paper_background_2708.jpg);
-        margin: 0 auto;
-        margin-top: 160px;
-        min-height: 30%;
-        width: 20%;
-        position: fixed;
-        border-radius: 15%;
-        box-shadow: 0px 0px 3px 3px rgb(41, 41, 41);
-        /* display: flex;
-        flex-direction: column;
-        justify-content: center; */
-        /* width: 250px;
-        height: 300px; */
-
-
-
-    }
-</style> -->
 
 <body>
 
@@ -42,9 +15,10 @@
 
             <button onclick="historiaCam()">História</button><button onclick="sobreCam()">Sobre</button>
             <button onclick="loginCam()">Login</button> <button onclick="cadastroCam()">Cadastre-se</button>
+            <span id="nome_span" class="c_nomeUsuario">xxxxxx</span> 
         </div>
     </div>
-    <div id="back" class="c_back">
+    <div id="back" class="c_backWP">
 
         <div id="container" class="c_container">
             <div id="papiro" class="c_papiro_login">
@@ -70,7 +44,8 @@
 
 </html>
 <script>
-
+  var usuarioNome =sessionStorage.NOME_USUARIO
+  nome_span.innerHTML=usuarioNome
 
     function entrar() {
 
@@ -108,7 +83,7 @@
                     sessionStorage.NOME_USUARIO = json.nomeUsuario;
                     sessionStorage.ID_USUARIO = json.idUsuario;
 
-                });
+                })
                 historiaCam();
             } else {
 

@@ -1,4 +1,5 @@
-
+var usuarioNome =sessionStorage.NOME_USUARIO
+nome_span.innerHTML=usuarioNome
 
 function loginCam(){
     window.location.assign("login.html")
@@ -48,6 +49,13 @@ function mostrarHistoria2(){
    
 }
 function mostrarHistoria3(){
+    img_esquerda.src = `assets/images/aragorn.png`
     papiroH.style.display="block"
    if(contador==3){contador++}
+   quest5.style.display="block"
+}
+function mostrarHistoria4(){
+    papiroH.style.display="block"
+    if(contador==4){contador++}
+
 }
