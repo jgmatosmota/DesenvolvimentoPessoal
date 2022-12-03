@@ -31,7 +31,7 @@ font-family: Ringbearer;
     width: 50%;
     margin-left: 25%;
 }
-button{
+.c_botaoH{
     background-color: transparent;
     color: white;
     justify-content: center;
@@ -104,16 +104,30 @@ input::placeholder {
     margin-top: -1px;
 
 }
+.c_papiroBoneco{
+    background: url(../assets/images/Papiro/vintage_paper_background_2708.jpg);
+    margin: 0 auto;
+    margin-top: 119px;
+    margin-left: 365px;
+    min-height: 55%;
+    width: 16%;
+    position: fixed;
+    border-radius: 15%;
+    box-shadow: 0px 0px 3px 3px rgb(41 41 41);
+
+}
 
 .c_papiroHist {
     background: url(../assets/images/Papiro/vintage_paper_background_2708.jpg);
     margin: 0 auto;
-    margin-top: 70px;
+    margin-top: 105px;
+    margin-left: 162px;
     min-height: 65%;
-    width: 70%;
+    width: 55%;
     position: fixed;
     border-radius: 5%;
-    box-shadow: 0px 0px 3px 3px rgb(41, 41, 41);
+    box-shadow: 0px 0px 3px 3px rgb(41 41 41);
+}
     /* margin-top: 160px;
     margin-left: 300px; */
     /* display: flex;
@@ -124,11 +138,16 @@ input::placeholder {
 
 
 
+
+.c_botaoFechar{
+    color: red;
+    background-color: white;
+
 }
 
 .c_img {
-    margin-top: 222px;
-    margin-left: 497px;
+    margin-top: 200px;
+    margin-left: 641px;
     cursor: pointer;
 }
 .c_texto{
@@ -142,30 +161,30 @@ input::placeholder {
     margin-top: 300px;
 }
 .c_img1 {
-    margin-top: -31px;
-    margin-left: 660px;
+    margin-top: 426px;
+    margin-left: 762px;
     cursor: pointer;
 }
 .c_img2 {
-    margin-top: 59px;
-    margin-left: 864px;
+    margin-top: 203px;
+    margin-left: 1047px;
     cursor: pointer;
 }
 .c_img3 {
-    margin-top: 39px;
-    margin-left: 1060px;
+    margin-top: 178px;
+    margin-left: 120px;
     cursor: pointer;
 }
 .c_img4{
-    margin-top: 18px;
-    margin-left: 1231px;
+    margin-top: 184px;
+    margin-left: 664px;
     cursor: pointer;
 }
 
 .c_papiro{
     background: url(../assets/images/Papiro/vintage_paper_background_2708.jpg);
     margin: 0 auto;
-    margin-top: 120px;
+    margin-top: 100px;
     min-height: 50%;
     width: 20%;
     position: fixed;
@@ -210,6 +229,15 @@ margin-top: 5%;
     line-height: 1.5;
     text-indent: 25px;
 }
+.c_modal_texto1 p{
+    font-size: 23px;
+    /* font-family:Olde English Regular; */
+    padding: 10%;
+    text-align: justify;
+    margin-top: 0px;
+    line-height: 1.5;
+    text-indent: 25px;
+}
 .c_box_info{
     background: url(../assets/images/backgroundBlack.jfif);
     margin: 0 auto;
@@ -239,4 +267,26 @@ margin-top: 5%;
 .c_containerBox{
     opacity: 100%;
     text-align: center;
+}
+.c_modalJogo{
+    background: url(../assets/images/motaland.jpg);
+    width: 75%;
+    left: 210px;
+    height: 100%;
+    position: absolute;
+    z-index: 150;
+    top: 0;
+    background-size: cover;
+}
+.c_background{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+
+}
+.c_boneco{
+    height: 396px;
+    margin-right: 40px;
+    display: flex;
+    margin-left: -37px;
 }

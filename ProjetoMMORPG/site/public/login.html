@@ -13,9 +13,9 @@
         <img src="assets/images\Um anel2.png" class="c_logo" onclick="historiaCam()">
         <div id="d_botao" class="c_botao">
 
-            <button onclick="historiaCam()">História</button><button onclick="sobreCam()">Sobre</button>
-            <button onclick="loginCam()">Login</button> <button onclick="cadastroCam()">Cadastre-se</button>
-            <span id="nome_span" class="c_nomeUsuario">xxxxxx</span> 
+            <button class="c_botaoH" onclick="historiaCam()">História</button><button onclick="sobreCam()" class="c_botaoH">Sobre</button>
+            <button onclick="loginCam()" class="c_botaoH">Login</button> <button onclick="cadastroCam()" class="c_botaoH">Cadastre-se</button>
+            <span id="nome_span" class="c_nomeUsuario"></span>
         </div>
     </div>
     <div id="back" class="c_backWP">
@@ -57,8 +57,6 @@
             return false;
         }
 
-        console.log("FORM LOGIN: ", emailVar);
-        console.log("FORM SENHA: ", senhaVar);
 
         fetch("/usuarios/autenticar", {
             method: "POST",
@@ -74,7 +72,6 @@
 
             if (resposta.ok) {
                 console.log(resposta);
-
                 resposta.json().then(json => {
                     console.log(json);
                     console.log(JSON.stringify(json));
@@ -82,9 +79,11 @@
                     sessionStorage.EMAIL_USUARIO = json.emailUsuario;
                     sessionStorage.NOME_USUARIO = json.nomeUsuario;
                     sessionStorage.ID_USUARIO = json.idUsuario;
+                    sessionStorage.CLASSE_USUARIO = json.classe;
 
                 })
                 historiaCam();
+                logarNome();
             } else {
 
                 console.log("Houve um erro ao tentar realizar o login!");
@@ -101,8 +100,5 @@
         return false;
     }
 
-    function sumirMensagem() {
-        cardErro.style.display = "none"
-    }
-
+   
 </script>
