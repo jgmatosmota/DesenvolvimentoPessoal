@@ -45,6 +45,7 @@
 </html>
 <script>
   var usuarioNome =sessionStorage.NOME_USUARIO
+  var usuarioClasse =  sessionStorage.CLASSE_USUARIO
   nome_span.innerHTML=usuarioNome
 
     function entrar() {
@@ -79,7 +80,7 @@
                     sessionStorage.EMAIL_USUARIO = json.emailUsuario;
                     sessionStorage.NOME_USUARIO = json.nomeUsuario;
                     sessionStorage.ID_USUARIO = json.idUsuario;
-                    sessionStorage.CLASSE_USUARIO = json.classe;
+                    sessionStorage.CLASSE_USUARIO = json.fkClasse;
 
                 })
                 historiaCam();

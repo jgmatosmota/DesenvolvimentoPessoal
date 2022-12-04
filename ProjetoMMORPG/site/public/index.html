@@ -7,7 +7,7 @@
 </head>
 
 <body>
-    <div  id="div_header" class="header">
+    <div id="div_header" class="header">
         <img src="assets/images\Um anel2.png" class="c_logo" onclick="historiaCam()">
         <div id="d_botao" class="c_botao">
 
@@ -19,45 +19,92 @@
         </div>
     </div>
     <div id="background" class="c_background">
-        
+
         <div id="modalJogo" class="c_modalJogo" style="display: none;">
             <button class="c_botaoFechar" onclick="fecharMapa()">X</button>
-            <div id="papiroH" class="c_papiroHist" style="display: none;">
-                <table style="width: 100%; height:100%;">
-                    <tr>
-                        <td style="width: 40%;"> <img
-                                src="assets/images/imgbin_human-behavior-thought-art-gandalf-png.png" id="img_esquerda"
-                                width="100%" height="90%"></td>
-                        <td style="width: 50%;"><br><br><br>
-                            <p id="p_texto"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae amet iure, tempora
-                                magni dignissimos dolor ea perspiciatis inventore praesentium eveniet. Ea exercitationem
-                                architecto natus perferendis aperiam laudantium deleniti hic cupiditate?</p>
-                            <button class="c_botaoX" onclick="voltarHist()">XXXXXXX</button>
-                        </td>
-                        <td style="width: 10%;"></td>
-                    </tr>
-                </table>
+            <div id="azyllom" class="c_hoverBox1">
 
-            </div> 
+            </div>
+            <div id="azyllomModal" class="c_papiroTodos c_papiroPosition1">
+                <span class="modalHoverText">
+                    <p>
+                        Azyllom é uma cidade antiga comandada pela família real Victus a incontáveis gerações,
+                        é um lugar onde seus moradores convivem pacificamente e em harmonia, mas está sendo
+                        ameaçada pelos seres da Cidadela do Caos, felizmente o podero artefato denomonicom está em posse
+                        da família real e cria uma barreira de segurança mágica ao redor da cidade.
+                    </p>
+                </span>
+            </div>
+            <div id="cidadelaCaos" class="c_hoverBox2"></div>
+            <div id="cidadelaCaosModal" class="c_papiroTodos c_papiroPosition2">
+                <span class="modalHoverText">
+                    <p>
+                        A Cidadela do Caos é um lugar de criaturas anciãs criadas pelo poderoso mago Zaza,
+                        ele deu vida a essas criaturas para acabar com o reino de Azyllom, isso aconteceu pois
+                        muitas eras atrás ele foi expulso de Azyllom por praticar magias obscuras, e assim
+                        prometeu acabar com todo o tipo de ordem que existia na grande cidade.
+                    </p>
+                </span>
+            </div>
+            <div id="torrePerdida" class="c_hoverBox3"></div>
+            <div id="torrePerdidaModal" class="c_papiroTodos c_papiroPosition3">
+                <span class="modalHoverText">
+                    <p>
+                        A Torre Perdida era o local de morada do mago Zaza, ela está abandonada a incontáveis
+                        anos, desde o misterioso desaparecimento do podereso mago a torre se encontra abandonada
+                        e tomada por criaturas de forma humanoide e de origem desconhecida.
+                    </p>
+                </span>
+            </div>
+            <div id="amonKeth" class="c_hoverBox4"></div>
+            <div id="amonKethModal" class="c_papiroTodos c_papiroPosition4">
+                <span class="modalHoverText">
+                    <p>
+                        A antiga cidade de Amon Keth fica localizada no meio do deserto,
+                        é conhecida em todo continente pela sua energia mágica que está presente no local,
+                        é a casa de antigos magos e sacerdotes que preservavam o equilíbrio entre os dois mundos
+                    </p>
+                </span>
+            </div>
+            <div id="papiroH" class="c_papiroHist" style="display: none;">
+                <div id="imagemPapiro" class="imgPapiroQuest">
+                    <img src="" id="img_esquerda" class="c_imgQuest">
+                </div>
+                <div id="textoPapiro" class="textoPapiroQuest">
+                    <div id="containerTexto">
+                        <p class="c_textoQuest1"><span id="p_texto"> 
+                            </span>
+                        </p>
+                    </div>
+                    <div id="containerBotao">
+                        <button class="c_botaoX" onclick="voltarHist()">Continuar!</button>
+                    </div>
+                </div>
+
+            </div>
             <div id="quest1" class="c_quest1" style="display: block;">
-                <img src="assets/images/Quest_Main_Available_Icon_001.png" class="c_img" width="45pxpx" height="45px"
-                    onclick="mostrarHistoria()">
+                <img src="assets/images/Quest_Main_Available_Icon_001.png" class="c_img c_index" width="45pxpx"
+                    height="45px" onclick="mostrarHistoria()">
             </div>
             <div id="quest2" style="display: none;">
-                <img src="assets/images/Quest_Main_Available_Icon_001.png" class="c_img1" width="45px" height="45px"
-                    onclick="mostrarHistoria1()">
+                <img src="assets/images/Quest_Main_Available_Icon_001.png" class="c_img1 c_index" width="45px"
+                    height="45px" onclick="mostrarHistoria1()">
             </div>
             <div id="quest3" style="display: none;">
-                <img src="assets/images/Quest_Main_Available_Icon_001.png" class="c_img2" width="45px" height="45px"
-                    onclick="mostrarHistoria2()">
+                <img src="assets/images/Quest_Main_Available_Icon_001.png" class="c_img2 c_index" width="45px"
+                    height="45px" onclick="mostrarHistoria2()">
             </div>
             <div id="quest4" style="display: none;">
-                <img src="assets/images/Quest_Main_Available_Icon_001.png" class="c_img3" width="45px" height="45px"
-                    onclick="mostrarHistoria3()">
+                <img src="assets/images/Quest_Main_Available_Icon_001.png" class="c_img3 c_index" width="45px"
+                    height="45px" onclick="mostrarHistoria3()">
             </div>
             <div id="quest5" style="display: none;">
-                <img src="assets/images/Quest_Main_Available_Icon_001.png" class="c_img4" width="45px" height="45px"
-                    onclick="mostrarHistoria4()">
+                <img src="assets/images/Quest_Main_Available_Icon_001.png" class="c_img4 c_index" width="45px"
+                    height="45px" onclick="mostrarHistoria4()">
+            </div>
+            <div id="quest6" style="display: none;">
+                <img src="assets/images/Quest_Main_Available_Icon_001.png" class="c_img5 c_index" width="45px"
+                    height="45px" onclick="mostrarHistoria5()">
             </div>
         </div>
 
@@ -67,21 +114,22 @@
         <div id="container" class="c_container">
             <div id="papiro" class="c_papiro_modal">
 
-                <h1>BEM VINDO AO MUNDO DE MOTA`S LAND!</h1>
+                <h1>BEM VINDO A MOTA`S LAND!</h1>
 
                 <span class="c_modal_texto">
                     <p> Um reino mágico cheio de coisas que antes apenas existiam no mundo da imaginação,
                         mas nem tudo está acontecendo como deveria acontecer, um importantíssimo artefato
-                        foi roubado de seu lugar de origem pelos cavaleiros da cidadela do caos
+                        foi destruído roubado de seu lugar de origem pelos monstros da cidadela do caos
                         e você, o grande herói de nosso magnífico reino precisa reunir forças e tentar
                         o quanto antes recuperar esse artefato mágico, energiza-lo novamente e
                         e devolve-lo ao seu lugar onde ele conseguirá cumprir sua função de
                         colocar equilíbrio no tecido que separa o plano em que vivemos com o
-                        plano de seres mágicos!
+                        plano de seres mágicos, mas não perca tempo porquê muitas vidas inocentes
+                        dependem de você!
                     </p>
                 </span>
                 <div id="botao_modal">
-                    <button onclick="jogarJogo()" class="c_cadastrar">Jogar</button>
+                    <button onclick="jogarJogo()" class="c_botaoJogar">Jogar</button>
                 </div>
 
 
@@ -97,40 +145,24 @@
 <script>
     var contador = 0 
 </script>
-<!-- <div id="papiroH" class="c_papiroHist" style="display: none;">
-                <table style="width: 100%; height:100%;">
-                    <tr>
-                        <td style="width: 40%;"> <img
-                                src="assets/images/imgbin_human-behavior-thought-art-gandalf-png.png" id="img_esquerda"
-                                width="100%" height="90%"></td>
-                        <td style="width: 50%;"><br><br><br>
-                            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae amet iure, tempora
-                                magni dignissimos dolor ea perspiciatis inventore praesentium eveniet. Ea exercitationem
-                                architecto natus perferendis aperiam laudantium deleniti hic cupiditate?</p>
-                            <button class="c_botaoX" onclick="voltarHist()">XXXXXXX</button>
-                        </td>
-                        <td style="width: 10%;"></td>
-                    </tr>
-                </table>
-
-            </div> -->
-<!-- <div id="quest1" class="c_quest1" style="display: none;">
-            <img src="assets/images/Quest_Main_Available_Icon_001.png" class="c_img" width="55px" height="55px"
-                onclick="mostrarHistoria()">
-        </div>
-        <div id="quest2" style="display: none;">
-            <img src="assets/images/Quest_Main_Available_Icon_001.png" class="c_img1" width="55px" height="55px"
-                onclick="mostrarHistoria1()">
-        </div>
-        <div id="quest3" style="display: none;">
-            <img src="assets/images/Quest_Main_Available_Icon_001.png" class="c_img2" width="55px" height="55px"
-                onclick="mostrarHistoria2()">
-        </div>
-        <div id="quest4" style="display: none;">
-            <img src="assets/images/Quest_Main_Available_Icon_001.png" class="c_img3" width="55px" height="55px"
-                onclick="mostrarHistoria3()">
-        </div>
-        <div id="quest5" style="display: none;">
-            <img src="assets/images/Quest_Main_Available_Icon_001.png" class="c_img4" width="55px" height="55px"
-                onclick="mostrarHistoria4()">
-        </div> -->
+<!-- <table class="c_tableClass">
+    <tr>
+        <td style="width: 360px;"> <img src="" id="img_esquerda" class="c_imgQuest"></td>
+        <td style="width: 450px;"><br><br><br>
+            <p class="c_textoQuest1"><span id="p_texto"> Depois de receber a carta da nobre princesa Elizabeth Victus, você grande
+                herói NOME foi convocado para ajudar na recuperação do antigo artefato denomonicom,
+                de acordo com a carta a princesa conta que em uma invasão das criaturas da
+                Cidadela do Caos o poderoso artefato foi quebrado em duas partes e roubado pelas
+                criaturas, você foi convocado para invadir a morada dessas criaturas e tentar recuperar
+                o antigo artefato que garantia a proteção de todo o povo de Azyllom, como você é conhecido por
+                todo o continete de Mota`sland, a família real Victus acredita que você é o único ser capaz de realizar
+                tal feito com sucesso!<Br>
+                Você aceita essa missão? 
+            </span>
+                    <button class="c_botaoX" onclick="voltarHist()">Continuar!</button>
+            </p>
+           
+        </td>
+        <td style="width: 90px;"></td>
+    </tr>
+</table> -->
