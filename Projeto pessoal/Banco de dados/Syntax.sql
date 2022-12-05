@@ -38,14 +38,16 @@ fkDecisao INT
   idDecisao int auto_increment primary key,
   resultado varchar(45)
   );
-ALTER TABLE usuario 
-ADD FOREIGN KEY (fkJogo) REFERENCES jogo(idJogo);
-ALTER TABLE jogo  ADD FOREIGN KEY (fkDecisao) REFERENCES decisao(idDecisao);
+  insert into decisao values (null, 'Viajar'),(null, 'ficar');
+  select * from decisao;
 select * from usuario;
 use projetoPessoal;
-select * from jogo;
+insert into jogo values (1,1,1,1,1,1,1);
+select * from classe;
 select * from decisao;
-
+select COUNT(fkClasse) as 'ClasseEscolhida', nomeClasse  from usuario  join classe on fkClasse = idClasse group by fkClasse order by fkClasse desc limit 1;
+select COUNT(fkJogo) as 'FinalEscolhido', resultado  from usuario  join decisao on fkJogo = idDecisao group by resultado order by resultado desc limit 1;
+, COUNT(fkJogo) as 'FinalEscolhido' 
 select length(sha2('${senha}', 256));
 
 desc usuario;

@@ -9,12 +9,16 @@
 
 <body>
 
-    <div class="header">
+    <div id="div_header" class="header">
         <img src="assets/images\Um anel2.png" class="c_logo" onclick="historiaCam()">
         <div id="d_botao" class="c_botao">
 
-            <button class="c_botaoH" onclick="historiaCam()">História</button><button onclick="sobreCam()" class="c_botaoH">Sobre</button>
-            <button onclick="loginCam()" class="c_botaoH">Login</button> <button onclick="cadastroCam()" class="c_botaoH">Cadastre-se</button>
+            <button class="c_botaoH" onclick="historiaCam()">História</button><button onclick="sobreCam()"
+                class="c_botaoH">Sobre</button>
+            <button id="btnL" onclick="loginCam()" class="c_botaoH">Login</button> <button id="btcC" onclick="cadastroCam()"
+                class="c_botaoH">Cadastre-se</button><button onclick="rankingCam()"
+                class="c_botaoH">Ranking</button><button id="btnS" onclick="logoutCam()"
+                class="c_botaoH">Sair</button>
             <span id="nome_span" class="c_nomeUsuario"></span>
         </div>
     </div>
@@ -27,11 +31,11 @@
                     <label for="in_usuario">
                         <b>E-MAIL</b>
                     </label><Br>
-                    <input id="in_email" class="c_input" placeholder="Gandalf@sptech.school"><br><br>
+                    <input id="in_email" class="c_input" ><br><br>
                     <label for="in_senha">
                         <b>SENHA</b>
                     </label><Br>
-                    <input id="in_senha" class="c_input" type="password" placeholder="********"><br><br>
+                    <input id="in_senha" class="c_input" type="password"><br><br>
                     <button onclick="entrar()" class="c_cadastrar">LOGAR!</button>
 
                 </div>
@@ -76,10 +80,9 @@
                 resposta.json().then(json => {
                     console.log(json);
                     console.log(JSON.stringify(json));
-
                     sessionStorage.EMAIL_USUARIO = json.emailUsuario;
                     sessionStorage.NOME_USUARIO = json.nomeUsuario;
-                    sessionStorage.ID_USUARIO = json.idUsuario;
+                    sessionStorage.ID_USUARIO = json.idusuario;
                     sessionStorage.CLASSE_USUARIO = json.fkClasse;
 
                 })

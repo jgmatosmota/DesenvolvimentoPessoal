@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+
+<body>
+
+    <div id="div_header" class="header">
+        <img src="assets/images\Um anel2.png" class="c_logo" onclick="historiaCam()">
+        <div id="d_botao" class="c_botao">
+
+            <button class="c_botaoH" onclick="historiaCam()">História</button><button onclick="sobreCam()"
+                class="c_botaoH">Sobre</button>
+            <button id="btnL" onclick="loginCam()" class="c_botaoH">Login</button> <button id="btcC"
+                onclick="cadastroCam()" class="c_botaoH">Cadastre-se</button><button onclick="rankingCam()"
+                class="c_botaoH">Ranking</button><button id="btnS" onclick="logoutCam()" class="c_botaoH">Sair</button>
+            <span id="nome_span" class="c_nomeUsuario"></span>
+        </div>
+    </div>
+    <div id="back" class="c_backWP">
+
+        <div id="container" class="c_container">
+            <div id="papiro" class="c_papiroRanking">
+                <div id="listaClasse" class="c_papiroRankingEsp">
+                    <div id="caixaNumero">
+                        <h4>
+                            <p>A CLASSE MAIS ESCOLHIDA FOI: <span id="spanClasse" class="spanFonte"></span></p>
+                        </h4>
+                        <h4>
+                            <p>ELA FOI ESCOLHIDA <span id="quantidadeClasse" class="spanFonte"></span>VEZES </p>
+                        </h4>
+                        <div id="imagemEscolhido"></div>
+                    </div>
+
+                </div>
+                <div id="listaFinal" class="c_papiroRankingEsp">
+
+                    <div id="caixaFinais">
+                        <h4>
+                            <p>O FINAL MAIS ESCOLHIDO FOI:<span id="spanFinal" class="spanFonte"></span></p>
+                        </h4>
+                        <h4>
+                            <p>ELE FOI ESCOLHIDO<span id="spanFinalQuant" class="spanFonte"></span> VEZES</p>
+                        </h4>
+                        <h4>
+                            <div id="imagemEscolhidoFinal"></div>
+                    </div>
+                </div>
+                <div id="listaUsuario" class="c_papiroRankingCaixaLista">
+                    <h4>
+                        <p>LISTA DE USUÁRIOS</p>
+                    </h4>
+                    <div id="caixaUsuarios" class="c_papiroRankingLista">
+                        <div id="caixaUsuario1" class="c_papiroRankingCaixa">
+                            <div id="divNome" class="nomeRank">
+                                <span id="rankingUsuario1">Nome</span>
+                            </div>
+                            <div id="divClasse" class="classeRank">
+                                <span id="rankingClasse1">Classe</span>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div id="divMensagem" class="c_divMsg">
+                        TEM ALGUM COMENTÁRIO OU SUGESTÃO?<br>
+                        SÓ CLICAR NO BOTÃO E ENVIAR!<BR>
+                        <button class="c_botaoJogar1" onclick="sugestao()">Enviar</button>
+
+                    </div>
+                </div>
+
+            </div>
+            <div id="papiroSug" class="c_papiroRanking1" style="display: none;">
+                <div id="textoPap">
+                    <h2>ENVIE-NOS ALGUMA SUGESTÃO OU DICA PARA MELHORIA<br>
+                        SERIA DE GRANDE AJUDA PARA NÓS!</h2>
+                </div>
+                <textarea class="c_inputSugestao" id="in_sugestao" cols="30" rows="10"></textarea>
+                <button class="c_botaoSug1" onclick="enviarSug()">Enviar Sugestão</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="js/Funções.js"></script>
+
+</html>

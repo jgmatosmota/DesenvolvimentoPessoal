@@ -19,5 +19,26 @@ router.post("/cadastrar", function (req, res) {
 router.post("/autenticar", function (req, res) {
     usuarioController.entrar(req, res);
 });
+router.post("/cadastrarResposta", function(req,res){
+    usuarioController.cadastrarResposta(req, res);
+});
+
+router.get("/trazerLista", function(req,res){
+    usuarioController.trazerLista(req, res);
+
+});
+router.get("/trazerListaFinal", function(req,res){
+    usuarioController.trazerListaFinal(req, res);
+
+});
+router.get("/trazerListaJogadores", function(req,res){
+    usuarioController.trazerListaJogadores(req, res);
+
+});
+router.post("/cadastrarSugestao", function(req,res){
+    usuarioController.cadastrarSugestao(req, res);
+
+});
+
 
 module.exports = router;

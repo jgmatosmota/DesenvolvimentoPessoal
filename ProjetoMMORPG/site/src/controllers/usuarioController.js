@@ -59,7 +59,18 @@ function entrar(req, res) {
     }
 
 }
+function cadastrarResposta (req, res){
 
+    var final = req.body.respostaA
+    var usuario = req.body.idUsuario
+    usuarioModel.cadastrarResposta(final, usuario).then(
+        function(resultado2){
+            res.json(resultado2)
+        }
+
+    )
+
+}
 function cadastrar(req, res) {
     // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
     var nome = req.body.nomeServer;
@@ -95,9 +106,65 @@ function cadastrar(req, res) {
     }
 }
 
+function trazerLista(req, res){
+    usuarioModel.trazerLista().then (
+        function (resultado) {
+            res.json(resultado);
+        }
+
+    ).catch(
+        function(erro){
+            console.log(`iiiiiiii deu ruim`)
+        }
+    )
+};
+function trazerListaFinal(req, res){
+    usuarioModel.trazerListaFinal().then (
+        function (resultado) {
+            res.json(resultado);
+        }
+
+    ).catch(
+        function(erro){
+            console.log(`iiiiiiii deu ruim`)
+        }
+    )
+};
+function trazerListaJogadores(req, res){
+    usuarioModel.trazerListaJogadores().then (
+        function (resultado) {
+            res.json(resultado);
+        }
+
+    ).catch(
+        function(erro){
+            console.log(`iiiiiiii deu ruim`)
+        }
+    )
+}
+function cadastrarSugestao(req, res){
+    var sugA = req.body.sugestaoA
+    var idUsu = req.body.idUsuario
+    usuarioModel.cadastrarSugestao(sugA,idUsu).then (
+        function (resultado) {
+            res.json(resultado);
+        }
+
+    ).catch(
+        function(erro){
+            console.log(`iiiiiiii deu ruim`)
+        }
+    )
+}
+
 module.exports = {
     entrar,
     cadastrar,
     listar,
-    testar
+    testar,
+    cadastrarResposta,
+    trazerLista,
+    trazerListaFinal,
+    trazerListaJogadores,
+    cadastrarSugestao
 }

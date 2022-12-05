@@ -8,28 +8,115 @@
 
 <body>
 
-    <div class="header">
+    <div id="div_header" class="header">
         <img src="assets/images\Um anel2.png" class="c_logo" onclick="historiaCam()">
         <div id="d_botao" class="c_botao">
 
-            <button class="c_botaoH" onclick="historiaCam()">História</button><button onclick="sobreCam()" class="c_botaoH">Sobre</button>
-            <button onclick="loginCam()" class="c_botaoH">Login</button> <button onclick="cadastroCam()" class="c_botaoH">Cadastre-se</button>
+            <button class="c_botaoH" onclick="historiaCam()">História</button><button onclick="sobreCam()"
+                class="c_botaoH">Sobre</button>
+            <button id="btnL" onclick="loginCam()" class="c_botaoH">Login</button> <button id="btcC"
+                onclick="cadastroCam()" class="c_botaoH">Cadastre-se</button><button onclick="rankingCam()"
+                class="c_botaoH">Ranking</button><button id="btnS" onclick="logoutCam()" class="c_botaoH">Sair</button>
             <span id="nome_span" class="c_nomeUsuario"></span>
         </div>
     </div>
     <div id="back" class="c_backLogin">
         <div class="c_box_info" id="box_info">
-            <div class="c_containerBox">
-                <h1 class="c_tituloBox">SOBRE MIM </h1>
-                <P class="c_textoBox">
-                    Desde pequeno eu sou apaixonado por estórias fantasiosas, principalmente Senhor dos Anéis,
-                    também por RPGS que foram influenciados diretamente por essa grande obra.
-                    Tudo começou quando eu tinha 11 anos e sofri um trauma muito grande, andava meio
-                    depressivo e conhecer todo esse universo me deixou muito entretido e imerso
-                    até eu conseguir lidar melhor com esse trauma; Quando fiz 14 conheci o mundo
-                    dos MMORPGS, jogos onde eu poderia ser qualquer tipo de coisa que eu quisesse,
-                    como um Elfo ou um Anão,
-                </P>
+            <div class="c_containerBoxTexto">
+
+                <div id="divTexto" class="c_textoEu">
+                    <h1 class="c_tituloBox">Quem é JoSé Mota?</h1>
+
+                    <img src="assets/images/Eu.jpg" alt="" class="c_foto">
+
+                    <P class="c_textoBox">
+                        Meu nome é José Mota, nasci em 1999 e sou apaixonado por livros, principalmente
+                        os que remetem a mundos imaginários e coisas que não existem na vida real.
+                        Essa minha paixão por livros começou quando eu tinha apenas 12 anos, passei por
+                        uma situação traúmatica e pra mim ler esse tipo de livro me tirava um pouco da realidade
+                        e me levava pra outro lugar, conheci esse mundo quando li Senhor dos Anéis pela primeira vez,
+                        por mais que o tipo de leitura fosse um pouco antigo e parado eu não consegui parar de ler até
+                        terminar o livro, e depois disso a minha vida mudou, pois começei a me interessar mais por esse
+                        tipo
+                        de conteúdo, depois disso recebi um convite do meu irmão para jogar RPG de mesa com ele, o RPG
+                        de mesa
+                        nada mais é do que um jogo de interpretação e imaginação, onde um mestre cria uma estória e os
+                        jogadores
+                        criam personagens para interpretar e viver essa estória, sendo que nem sempre ela vai sair como
+                        o mestre planejou
+                        e nisso que entra a imaginação e criatividade, pois na maioria das vezes nada sai como o
+                        planejado e o decorrer
+                        da estória vai de acordo com o que os jogadores querem fazer.
+
+
+
+
+                    </P>
+                    <p class="c_textoBox">
+                        Quando eu fiz 16 anos já jogava RPG com alguns amigos além do meu irmão e os amigos
+                        deles, sendo assim acabei fazendo várias amizades que levo até hoje, fora os ensinamentos
+                        sobre nunca desistir, confiar nas pessoas que estão comigo e também ser sempre persistento
+                        quando
+                        quero concluir algum objetivo, mesmo que a jornada para alcança-lo seja árdua, é importante
+                        sempre persistir e ser resiliente, que mesmo que demore, nada no mundo é inalcançavel!
+                    </p>
+                    <h1 class="c_tituloBox">LivroS FavoritoS</h1>
+                    <div class="c_fotoLivroTodos">
+                        <img src="assets/images/lotrLivro.jpg" alt="" class="c_fotoLivro">
+                        <img src="assets/images/n1Livro.jpg" alt="" class="c_fotoLivro">
+                        <img src="assets/images/refleLivro.jpg" alt="" class="c_fotoLivro">
+                    </div>
+                    <P class="c_textoBox">
+                        A grande característica que todos esses livros tem em comum é que eles se passam
+                        em mundo distópicos, embora o Jogador Número 1 e o Reflexo na Escuridão tenham características
+                        muito parecidas com o mundo real, eles se passam em mundos fantasiosos e com coisas que fogem
+                        muito
+                        da realidade que estamos acostumados, já o Senhor dos Anéis foge completamente de tudo, pois
+                        nele temos um
+                        mundo completamente fantástico e fora da realidade, ambos o livros me influenciaram muito por
+                        ter ensinamentos
+                        de ajudarmos o próximo e ser resiliente mesmo quando parece que tudo está perdido.
+                    </P>
+                    <h1 class="c_tituloBox">MangáS FavoritoS</h1>
+                    <div class="c_fotoLivroTodos">
+                        <img src="assets/images/berserkLivro.jpg" alt="" class="c_fotoLivro">
+                        <img src="assets/images/heroLivro.jpg" alt="" class="c_fotoLivro">
+                        <img src="assets/images/planetesLivro.jpg" alt="" class="c_fotoLivro">
+                    </div>
+                    <P class="c_textoBox">
+                        Um pouco diferente dos livros os mangás representam outro tipo de representação artística,
+                        além de chamar muito mais atenção para as artes do que para os textos ele consegue expressar,
+                        na minha opinião, muito mais os sentimentos e coisas que os protagonistas estão sentindo, seus
+                        medos e inseguranças, e tambêm mais alguns sentimentos como solidão, angústia.
+                        É algo muito mais claro de sentir e interpretar do que em livros, pois como está tudo ilustrado
+                        eu consigo saber exatamente como os personagens estão se sentindo só por olhar a expressão
+                        deles.
+
+                    </P>
+                    <h1 class="c_tituloBox">ValoreS</h1>
+                        <h3 class="c_textoBox">Respeito</h3>
+                        <p class="c_textoBox">
+                            Respeito é primordial para qualquer tipo de relação e interação pois se você não consegue
+                            respeitar o próximo, quem dirá que você consegue respeitar a si mesmo, pois se não possuimos 
+                            a capacidade de respeitar o próximo, independente de qualquer coisa, não conseguimos olhar
+                            para nós mesmos com o respeito que merecemos. 
+                        </p>
+                        <h3 class="c_textoBox">Humildade</h3>
+                        <p class="c_textoBox">
+                            Humildade representa para mim sempre não julgar os outros e também ter a maturidade e atitude
+                            para assumir meus próprios erros, além disso, também representa a igualdade entre todo mundo,
+                            ou seja, nunca diminuir ninguém e também nunca me achar melhor que ninguém, pois todos nós temos
+                            sempre que manter o respeito para com qualquer pessoa e também no ambiente que vivemos e convivemos.
+                        </p>
+                        <h3 class="c_textoBox">Resiliência</h3>
+                       <p class="c_textoBox"> Resiliência para mim é a força de vontade de nunca desistir independente das adversidades e dos desafios
+                        que encontramos no nosso caminho, é sempre ter a visão de que mesmo que as coisas estejam muito difíceis 
+                        devemos sempre olhar a situação com o olhar mais otimista possível, e também que nada é impossível, 
+                        só precisamos de força de vontade e planejamento, que conseguimos realizar praticamente todos os nossos sonhos!
+                    </p><br><Br><br>
+                
+                    
+                </div>
             </div>
         </div>
     </div>

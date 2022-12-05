@@ -8,12 +8,16 @@
 
 <body>
 
-    <div class="header">
+    <div id="div_header" class="header">
         <img src="assets/images\Um anel2.png" class="c_logo" onclick="historiaCam()">
         <div id="d_botao" class="c_botao">
 
-            <button class="c_botaoH" onclick="historiaCam()">História</button><button onclick="sobreCam()" class="c_botaoH">Sobre</button>
-            <button onclick="loginCam()" class="c_botaoH">Login</button> <button onclick="cadastroCam()" class="c_botaoH">Cadastre-se</button>
+            <button class="c_botaoH" onclick="historiaCam()">História</button><button onclick="sobreCam()"
+                class="c_botaoH">Sobre</button>
+            <button id="btnL" onclick="loginCam()" class="c_botaoH">Login</button> <button id="btcC" onclick="cadastroCam()"
+                class="c_botaoH">Cadastre-se</button><button onclick="rankingCam()"
+                class="c_botaoH">Ranking</button><button id="btnS" onclick="logoutCam()"
+                class="c_botaoH">Sair</button>
             <span id="nome_span" class="c_nomeUsuario"></span>
         </div>
     </div>
@@ -29,25 +33,25 @@
 
                 <div id="formulario" class="c_formulario">
                     <label for="in_usuario">
-                        <b>USUÁRIO</b>
+                        <b>NOME DO PERSONAGEM</b>
                     </label><Br>
-                    <input id="in_usuario" class="c_input" placeholder="Gandalf"><br><br>
+                    <input id="in_usuario" class="c_input" ><br><br>
                     <label for="in_email">
                         <b>E-MAIL</b>
                     </label><Br>
-                    <input id="in_email" type="email" class="c_input" placeholder="example@sptech.school"><br><br>
+                    <input id="in_email" type="email" class="c_input" ><br><br>
                     <label for="in_senha">
                         <b>SENHA</b>
                     </label><Br>
-                    <input id="in_senha" class="c_input" type="password" placeholder="********"><br><br>
+                    <input id="in_senha" class="c_input" type="password" ><br><br>
                     <label for="in_senhaConf">
                         <b>CONFIRMAÇÃO DE SENHA</b>
                     </label><Br>
                         
-                    <input id="in_senhaConf" class="c_input" type="password" placeholder="********"><br><br>
+                    <input id="in_senhaConf" class="c_input" type="password" ><br><br>
                     <label for="in_classeConf">
                         <b>ESOLHA UMA CLASSE</b><br>
-                        <Br><select name="" id="sel_classe" onchange="mostrarBoneco()" >
+                        <Br><select class="sel_classeClass" id="sel_classe" onchange="mostrarBoneco()" >
                             <option  value="">----</option>
                             <option value="1">ladino</option>
                             <option value="2">guerreio</option>

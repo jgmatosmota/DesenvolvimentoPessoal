@@ -1,18 +1,30 @@
 var usuarioNome = sessionStorage.NOME_USUARIO
-
+var usuarioEmail = sessionStorage.EMAIL_USUARIO
 var usuarioClasse = sessionStorage.CLASSE_USUARIO
+var idUsuario = sessionStorage.ID_USUARIO
 
 function loginCam() {
     window.location.assign("login.html")
 
 }
-window.onload = function () {
-    logarNome();
+function rankingCam() {
+    window.location.assign("ranking.html")
+}
+function logoutCam() {
+    sessionStorage.clear();
+    btnS.style.display = 'none'
+    btcC.style.display = 'block'
+    btnL.style.display = 'block'
+    loginCam();
 }
 function logarNome() {
     if (usuarioNome == null) {
         nome_span.innerHTML = ``
+        btnS.style.display = 'none'
     } else {
+        btnS.style.display = 'block'
+        btcC.style.display = 'none'
+        btnL.style.display = 'none'
         nome_span.innerHTML = `Olá, ${usuarioNome}`
     }
 }
@@ -46,8 +58,14 @@ function sobreCam() {
     window.location.assign("sobre.html")
 }
 function jogarJogo() {
-    modalJogo.style.display = "block"
-    div_header.style.display = "none"
+    if (usuarioNome == null) {
+        alert(`Você deve estar logado para jogar o jogo`)
+    } else {
+
+
+        modalJogo.style.display = "block"
+        div_header.style.display = "none"
+    }
 }
 function fecharMapa() {
     modalJogo.style.display = "none"
@@ -70,10 +88,10 @@ function voltarHist() {
     } else if (contador == 4) {
         quest4.style.display = "none"
         quest5.style.display = "block"
-    }else if (contador == 5){
+    } else if (contador == 5) {
         quest5.style.display = "none"
         quest6.style.display = "block"
-    }else if (contador==6){
+    } else if (contador == 6) {
         quest6.style.display = "none"
     }
     papiroH.style.display = "none"
@@ -162,11 +180,15 @@ function mostrarHistoria5() {
     papiroH.style.display = "flex"
     if (contador == 5) {
         contador++
-        if(usuarioClasse==1){
+        containerBotao.innerHTML = `
+        <button class="c_botaoX" onclick="viajar()">Viajar!</button> 
+        <button class="c_botaoX" onclick="ficar()">Ficar!</button>
+        `
+        if (usuarioClasse == 1) {
             img_esquerda.src = `assets/images/ladinoFeliz.png`
-        }else if(usuarioClasse==2){
+        } else if (usuarioClasse == 2) {
             img_esquerda.src = `assets/images/guerreiroFeliz.png`
-        }else if(usuarioClasse==3){
+        } else if (usuarioClasse == 3) {
             img_esquerda.src = `assets/images/magoFeliz.png`
         }
         p_texto.innerHTML = `Depois de alguns dias você decide partir para a proxima jornada atrás de aventura, mas assim que você
@@ -176,8 +198,193 @@ function mostrarHistoria5() {
         Mas o seu espírito aventureiro não sabe se essa seria a vida ideal para seguir, se continua as suas aventuras cheias de 
         perigo e emoção, ou se decide dar um fim a isso e aceita essa oferta<br>
         Oque você faz?`
-        
+
 
     }
 
+}
+
+var listaDecisao = []
+function viajar() {
+    if (contador == 6) {
+        var respostaFinal = 1
+        listaDecisao.push(respostaFinal)
+        if (usuarioClasse == 1) {
+            img_esquerda.src = `assets/images/ladinoDesp.png`
+        } else if (usuarioClasse == 2) {
+            img_esquerda.src = `assets/images/guerreiroDesp.png`
+        } else if (usuarioClasse == 3) {
+            img_esquerda.src = `assets/images/magoDesp.png`
+        }
+        p_texto.innerHTML = `Após muito tempo pensando e analisando, você olhou para trás e relembrou
+        de todas as aventuras e situações que passou, e sabe que é isso que você quer para o seu futuro,
+        mesmo que durante esse período dessa nova aventura você foi reconhecido como nunca antes pelos seus atos,
+        mas mesmo assim você decide partir......<Br>
+        A próxima embarcação para o continente vizinho sairá no final do dia....<Br>
+        Após alguns dias no mar você chega ao continente de Binho'sKingdom, e está pronto para a próxima aventura!<br><Br>
+        Obrigado por jogar, boa sorte com sua nova aventura!`;
+        containerBotao.innerHTML = `<button class="c_botaoX" onclick="voltarHist()">Finalizar!</button>`
+    }
+    fetch("/usuarios/cadastrarResposta", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            respostaA: listaDecisao[0],
+            idUsuario: idUsuario
+        })
+    }).then(function (resposta) {
+
+        if (resposta.ok) {
+            // alert(`deu certo`)
+
+        } else {
+            throw (`aconteceu algum erro`)
+        }
+    });
+
+}
+
+function ficar() {
+    if (contador == 6) {
+        var respostaFinal = 2
+        listaDecisao.push(respostaFinal)
+        p_texto.innerHTML = `Bom, depois de toda essa ventura você olhou pro seu passado e relembrou
+        todas as aventuras que já vicenciou, todos os lugares que já conheceu e conseguiu enxergar que talvez seria
+        a hora de viver uma vida diferente , mais tranquila e com uma segurança maior.......
+        Você deixa seu espírito aventureiro um pouco de lado e decide ficar no reino de Azyllom a convite da princesa.<br>
+        No dia seguinte a família real te da o titulo de Sir e te da uma propriedade nos redores do castelo<Br>
+        E agora você se sente pronto para viver essa nova fase da sua vida.....<Br><br>
+        Obrigado por jogar, boa sorte com sua nova aventura!
+        `;
+        containerBotao.innerHTML = `<button class="c_botaoX" onclick="voltarHist()">Finalizar!</button>`
+    }
+    fetch("/usuarios/cadastrarResposta", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            respostaA: listaDecisao[0],
+            idUsuario: idUsuario
+        })
+    }).then(function (resposta) {
+
+        if (resposta.ok) {
+            // alert(`deu certo`)
+
+        } else {
+            throw (`aconteceu algum erro`)
+        }
+    });
+
+
+}
+window.onload = function () {
+    logarNome();
+    puxarTudo();
+}
+
+function puxarTudo() {
+    fetch("/usuarios/trazerLista").then(function (resposta) {
+
+        if (resposta.ok) {
+            resposta.json().then((bananinha) => {
+                quantidadeClasse.innerHTML = `${bananinha[0].ClasseEscolhida} `
+                spanClasse.innerHTML = `${bananinha[0].nomeClasse}`
+                var nome = bananinha[0].nomeClasse
+                if (nome == 'ladino') {
+                    imagemEscolhido.innerHTML = `<img src="assets/images/ladinoFeliz.png" class="c_imgClasseR" id="imgRanking">`
+                } else if (nome == 'guerreiro') {
+                    imagemEscolhido.innerHTML = `<img src="assets/images/guerreiroFeliz.png" class="c_imgClasseR" id="imgRanking">`
+                } else if (nome == 'mago') {
+                    imagemEscolhido.innerHTML = `<img src="assets/images/magoFeliz.png" class="c_imgClasseR" id="imgRanking">`
+                }
+
+            })
+
+        } else {
+            throw (`aconteceu algum erro`)
+        }
+    });
+    fetch("/usuarios/trazerListaFinal").then(function (resposta) {
+
+        if (resposta.ok) {
+            resposta.json().then((bananinha) => {
+                spanFinal.innerHTML = `${bananinha[0].resultado} `
+                spanFinalQuant.innerHTML = ` ${bananinha[0].FinalEscolhido}`
+                var resultado = bananinha[0].resultado
+                if (resultado == 'Viajar') {
+                    imagemEscolhidoFinal.innerHTML = `<img src="assets/images/princesaCom.png" class="c_imgClasseR1" id="imgRankingFinal">`
+                } else if (resultado == 'ficar') {
+                    imagemEscolhidoFinal.innerHTML = `<img src="assets/images/princesa.png" class="c_imgClasseR1" id="imgRankingFinal">`
+                }
+
+            })
+
+        } else {
+            throw (`aconteceu algum erro`)
+        }
+    });
+    fetch("/usuarios/trazerListaJogadores").then(function (resposta) {
+
+        if (resposta.ok) {
+            resposta.json().then((bananinha) => {
+                for (var index = 0; index < bananinha.length; index++) {
+                    var usuarioListaLoop = bananinha[index];
+                    // rankingUsuario.innerHTML+=`${usuarioListaLoop.nick}<br>`
+                    // rankingClasse.innerHTML+=`${usuarioListaLoop.classeUsuario}<br>`
+
+                    caixaUsuarios.innerHTML += `
+                    <div id="caixaUsuario" class="c_papiroRankingCaixa">
+                        <div id="divNome" class="nomeRank">
+                            <span id="rankingUsuario">${usuarioListaLoop.nick}</span>
+                        </div>
+                        
+                        <div id="divClasse" class="classeRank">
+                            <span id="rankingClasse">${usuarioListaLoop.classeUsuario}</span>
+                        </div>
+
+                            
+                    </div>
+                    `
+
+
+                }
+
+            })
+
+        } else {
+            throw (`aconteceu algum erro`)
+        }
+    });
+
+
+}
+function sugestao() {
+    papiroSug.style.display = "flex"
+
+}
+function enviarSug() {
+    var valor = in_sugestao.value
+    fetch("/usuarios/cadastrarSugestao", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            sugestaoA: valor,
+            idUsuario: idUsuario
+        })
+    }).then(function (resposta) {
+
+        if (resposta.ok) {
+            // alert(`deu certo`)
+            alert(`Sugestão enviada com sucesso!`)
+            papiroSug.style.display = "none"
+        } else {
+            throw (`aconteceu algum erro`)
+        }
+    });
 }

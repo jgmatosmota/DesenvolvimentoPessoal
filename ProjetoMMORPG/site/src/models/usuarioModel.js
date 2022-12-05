@@ -31,9 +31,52 @@ function cadastrar(nome, senha,email, classe ) {
     return database.executar(instrucao);
   
 }
+function cadastrarResposta (final, usuario){
+    console.log (`insert deu certo`)
+    var instrucao = `
+        update usuario set fkJogo = ${final} where idusuario =  ${usuario} ;
+    `;
+    return database.executar(instrucao);
+}
+function trazerLista (){
+    var instrucao = `
+    select COUNT(fkClasse) as 'ClasseEscolhida', nomeClasse  from usuario 
+     join classe on fkClasse = idClasse group by fkClasse order by fkClasse desc limit 1;
+    `
+    return database.executar(instrucao);
+
+};
+function trazerListaFinal() {
+    var instrucao = `
+    select COUNT(fkJogo) as 'FinalEscolhido', resultado  from usuario 
+     join decisao on fkJogo = idDecisao group by resultado order by resultado desc limit 1;
+    `;
+    return database.executar(instrucao);
+
+};
+function trazerListaJogadores() {
+    var instrucao = `
+    select nomeUsuario as 'nick', nomeClasse as
+     'classeUsuario' from usuario join classe on fkClasse = idClasse;  
+    `;
+    return database.executar(instrucao);
+
+};
+function cadastrarSugestao(sugA,idUsu){
+    var instrucao = `
+    insert into sugestao(descricao, fkUsuario) values ('${sugA}', ${idUsu} );  
+    `;
+    return database.executar(instrucao);
+    
+}
 
 module.exports = {
     entrar,
     cadastrar,
     listar,
+    cadastrarResposta,
+    trazerLista,
+    trazerListaFinal,
+    trazerListaJogadores,
+    cadastrarSugestao
 };
